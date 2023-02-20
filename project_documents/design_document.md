@@ -19,13 +19,15 @@ level of detail to aim for.*
 
 *Explain clearly what problem you are trying to solve.*
 
+Zebra Care
+
 
 ## 2. Top Questions to Resolve in Review
 
 *List the most important questions you have about your design, or things that
 you are still debating internally that you might like help working through.*
 
-1.   
+1. 
 2.   
 3.  
 
@@ -35,12 +37,11 @@ you are still debating internally that you might like help working through.*
 would like to do (and why). You may also include use cases for yourselves, or
 for the organization providing the product to customers.*
 
-U1. *As a [product] customer, I want to `<result>` when I `<action>`*
+U1. As a  customer, I want to create an appointment with given services.
 
-U2. *As a [product] customer, I want to view my grocery list when I log into the
-grocery list page*
+U2. As a customer, I want to create, view, update and remove my appointment.
     
-U3. ...
+U3. 
 
 ## 4. Project Scope
 
