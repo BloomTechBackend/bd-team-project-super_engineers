@@ -3,6 +3,16 @@
 title Create Appointment
 autonumber
 
+actor Patient
+participant "API Gateway" as APIGateway
+participant Lambda
+participant CreateAppointment
+participant AppointmentDao
+participant AppointmentServiceUtils
+participant ModelConverter
+database DynamoDB
+
+Patient -> CreateAppointment : create schedule
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 

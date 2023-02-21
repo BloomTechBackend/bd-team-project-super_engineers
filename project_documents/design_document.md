@@ -19,7 +19,11 @@ level of detail to aim for.*
 
 *Explain clearly what problem you are trying to solve.*
 
-Zebra Care
+This design document highlights the significance of Zebra Care Dental Services,
+a dental clinic appointment application that offers a range of dental services.
+Our application is tailored to meet the diverse needs of our customers, providing a seamless experience for scheduling 
+dental appointments. With our user-friendly interface, customers can easily choose their preferred clinics and the 
+specific dental services they require.
 
 
 ## 2. Top Questions to Resolve in Review
@@ -27,7 +31,7 @@ Zebra Care
 *List the most important questions you have about your design, or things that
 you are still debating internally that you might like help working through.*
 
-1. 
+1. How many and what are the models we're going to use.
 2.   
 3.  
 
@@ -41,7 +45,9 @@ U1. As a  customer, I want to create an appointment with given services.
 
 U2. As a customer, I want to create, view, update and remove my appointment.
     
-U3. 
+U3. As a dentist, I want to open my portal and see my schedules
+
+U4 As a dentist, I should have an option to reschedule.
 
 ## 4. Project Scope
 
@@ -55,6 +61,10 @@ your design.*
 *Which parts of the problem defined in Sections 1 and 3 will you solve with this
 design?*
 
+* Creating, retrieving and updating appointments
+* Check status of appointments for customer and dentist
+
+
 ### 4.2. Out of Scope
 
 *Based on your problem description in Sections 1 and 3, are there any aspects
@@ -62,6 +72,10 @@ you are not planning to solve? Do potential expansions or related problems occur
 to you that you want to explicitly say you are not worrying about now? Feel free
 to put anything here that you think your team can't accomplish in the unit, but
 would love to do with more time.*
+
+* The ability to provide a reminder before appointment starts.
+* Being able to provide different payment methods. 
+* Being able to provide clinics available base on your location
 
 # 5. Proposed Architecture Overview
 
@@ -76,6 +90,21 @@ reasonable. That is, why it represents a good data flow and a good separation of
 concerns. Where applicable, argue why this architecture satisfies the stated
 requirements.*
 
+This initial iteration will provide the minimum lovable product (MLP) including
+creating, retrieving, and updating an appointment.
+
+We will use API Gateway and Lambda to create five endpoints (`CreateAppointment`,
+ `UpdateAppointment`, `GetAppointment`)
+that will handle the creation, update, and retrieval of appointments to satisfy our
+requirements.
+
+We will store all the appointments in a table in DynamoDB. For simpler schedule retrieval.
+
+Zebra Care Dental Services will also provide a web interface for users to manage
+their appointments. A main page providing a list view of all of their appointments that
+will let them create, update and check the status of their schedules.
+
+
 # 6. API
 
 ## 6.1. Public Models
@@ -84,7 +113,33 @@ requirements.*
 *`-Model`* package. These will be equivalent to the *`PlaylistModel`* and
 *`SongModel`* from the Unit 3 project.*
 
-## 6.2. *First Endpoint*
+
+// PatientModel
+
+String name;
+String contactInformation;
+String address;
+String medical history;
+
+// AppointmentModel
+
+String date;
+String time;
+Integer hoursDuration;
+
+// DentistModel
+
+String name;
+String contactInformation;
+String availability;
+
+// OfficeModel
+
+String location;
+String contactInformation;
+String operationHours;
+
+## 6.2. *Get Appointment Endpoint*
 
 *Describe the behavior of the first endpoint you will build into your service
 API. This should include what data it requires, what data it returns, and how it
@@ -97,7 +152,14 @@ your team before building it!)*
 *(You should have a separate section for each of the endpoints you are expecting
 to build...)*
 
-## 6.3 *Second Endpoint*
+## 6.3 *Create Appointment Endpoint*
+
+*(repeat, but you can use shorthand here, indicating what is different, likely
+primarily the data in/out and error conditions. If the sequence diagram is
+nearly identical, you can say in a few words how it is the same/different from
+the first endpoint)*
+
+## 6.4 *Update Appointment Endpoint*
 
 *(repeat, but you can use shorthand here, indicating what is different, likely
 primarily the data in/out and error conditions. If the sequence diagram is
@@ -105,6 +167,38 @@ nearly identical, you can say in a few words how it is the same/different from
 the first endpoint)*
 
 # 7. Tables
+
+### 7.1. `Appointments`
+
+```
+id // partition key, string
+dentistName // string
+customerName // string
+contactInfo // string
+address // string
+officeLoc // string
+duration // string
+
+```
+
+### 7.2. `Dentists`
+```
+id // partition key, string
+name // string
+contactInfo // string
+availability // string
+
+```
+### 7.3. `Services`
+```
+
+id // partition key, string
+name // string
+contactInfo // string
+availability // string
+```
+
+
 
 *Define the DynamoDB tables you will need for the data your service will use. It
 may be helpful to first think of what objects your service will need, then
