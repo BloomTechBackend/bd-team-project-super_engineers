@@ -192,10 +192,8 @@ availability // string
 ### 7.3. `Services`
 ```
 
-id // partition key, string
-name // string
-contactInfo // string
-availability // string
+serviceId // partition key, string
+serviceName // string
 ```
 
 
