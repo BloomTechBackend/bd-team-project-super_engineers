@@ -45,10 +45,9 @@ U1. As a  customer, I want to create an appointment with given services.
 
 U2. As a customer, I want to create, view, update and remove my appointment.
     
-U3. As a dentist, I want to open my portal and see my schedules
+U3. As a dentist, I want to open my portal and see my schedules.
 
-U4 As a dentist, I should have an option to reschedule.
-
+U4.
 ## 4. Project Scope
 
 *Clarify which parts of the problem you intend to solve. It helps reviewers know
