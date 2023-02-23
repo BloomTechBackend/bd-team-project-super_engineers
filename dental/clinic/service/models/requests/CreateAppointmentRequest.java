@@ -1,4 +1,4 @@
-package com.example.appointment.service.models.requests;
+package dental.clinic.service.models.requests;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
