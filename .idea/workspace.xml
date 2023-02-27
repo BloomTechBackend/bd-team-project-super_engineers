@@ -5,212 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20a509d8-6bc0-4a90-9b11-32f06e77a49d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/checkstyle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/foundations/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/selfservice/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/unit1/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/unit2/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/unit3/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/unit4/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/unit5/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACheckstyle/configuration/checkstyle/unit6/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/Config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/model/exceptions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/model/main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/model/operations/addSongToPlaylist.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/model/operations/createPlaylist.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/model/operations/getPlaylist.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/model/operations/getPlaylistSongs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/model/operations/updatePlaylist.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/model/structures.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceLambdaModel/model/types.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/Config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/configuration/aws_lambda/lambda-transform.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/com/amazon/ata/music/playlist/service/helper/MusicPlaylistIntegrationTestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/com/amazon/ata/music/playlist/service/helper/PlaylistAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/com/amazon/ata/music/playlist/service/helper/PlaylistTestHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/com/amazon/ata/music/playlist/service/helper/TctIntrospectionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/com/amazon/ata/music/playlist/service/mastery/task1/MasteryTaskOneTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/com/amazon/ata/music/playlist/service/mastery/task2/MasteryTaskTwoTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/com/amazon/ata/music/playlist/service/mastery/task4/MasteryTaskFourTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/com/amazon/ata/music/playlist/service/mastery/task5/MasteryTaskFiveTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/com/amazon/ata/music/playlist/service/preparedness/task2/PreparednessTaskTwoTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/src/testng-beta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumMusicPlaylistServiceTCTs/tst/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/buildSrc/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/assertions/AtaAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/assertions/IntrospectionAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/assertions/PlantUmlClassDiagramAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/assertions/PlantUmlSequenceDiagramAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/helper/AtaTestHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/helper/FreeFormTextHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/helper/PlantUmlClassDiagramHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/helper/PlantUmlSequenceDiagramHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/junit/ATATestExecutionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/junit/ATATestSuiteRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/ClassQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/ClassQueryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/ConstructorQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/ConstructorQueryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/MethodInvoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/MethodQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/MethodQueryException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/MultipleClassesFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/MultipleConstructorsFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/MultipleMethodsFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/NoClassFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/NoConstructorFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/reflect/NoMethodFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/tct/TctResultExceptionIterator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/types/ATATestId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/types/ATATestResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/types/ATATestSuiteId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/types/ATATestSuiteReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/src/com/amazon/ata/test/wrapper/WrapperBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/assertions/AtaAssertionsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/assertions/IntrospectionAssertionsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/assertions/PlantUmlClassDiagramAssertionsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/assertions/PlantUmlSequenceDiagramAssertionsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/helper/AtaTestHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/helper/FreeFormTextHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/helper/PlantUmlClassDiagramHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/helper/PlantUmlSequenceDiagramHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/junit/ATATestExecutionListenerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/junit/ATATestSuiteRunnerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/junit/FakeTestDescriptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/junit/tests/AllFailTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/junit/tests/AllPassTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/junit/tests/ExceptionTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/junit/tests/MixedResultsTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/junit/tests/SetupFailTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/ClassQueryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/ConstructorQueryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/MethodInvokerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/MethodQueryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/testpackage/AnotherClassInTestPackage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/testpackage/ClassInTestPackage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/testpackage/DupedSimpleName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/testpackage/ExceptionInTestPackage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/testpackage/anothersubpackage/AnotherPackage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/testpackage/anothersubpackage/DupedSimpleName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/reflect/testpackage/subpackage/ClassInTestPackageSubpackage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/tct/TctResultExceptionIteratorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATACurriculumTestInfrastructure/tst/com/amazon/ata/test/wrapper/WrapperBaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/ATAResources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/debugging/dependencies/AmazonIdentityService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/debugging/dependencies/AmazonProductService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/debugging/dependencies/Product.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/designcomposition/fastgeometry/MITPoint2D.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/designcomposition/fastgeometry/PointInTwoDimensions.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/lists/prework/Destination.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/maps/gpmreminder/client/PlmClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/maps/gpmreminder/model/Amazonian.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/maps/gpmreminder/model/CountAssociation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/maps/gpmreminder/model/DevicePart.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/maps/gpmreminder/model/DevicePartReport.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/maps/gpmreminder/model/GpmPartReminder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/model/Customer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/model/PaymentInstrumentType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/statics/functionrunner/dependencies/CustomerFunction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/statics/functionrunner/dependencies/CustomerFunctionFetcher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/resources/statics/functionrunner/dependencies/TestCustomerFunction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/ata/retail/ProductInformation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/stock/BuyStockRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/stock/BuyStockResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/stock/InsufficientStockException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/stock/NonExistentStockException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/stock/SellStockRequest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/stock/SellStockResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/stock/Stock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/stock/StockExchange.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/amazon/stock/StockPriceResponse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/main/com/banking/business/payroll/client/BankClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/test/com/amazon/ata/resources/debugging/dependencies/AmazonIdentityServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/test/com/amazon/ata/resources/debugging/dependencies/AmazonProductServiceTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/classes/java/test/com/amazon/stock/StockTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/libs/LessonPlanResources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/tmp/compileTestJava/source-classes-mapping.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/debugging/classroom/dependencies/AmazonIdentityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/debugging/classroom/dependencies/AmazonProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/debugging/classroom/dependencies/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/designcomposition/fastgeometry/MITPoint2D.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/designcomposition/fastgeometry/PointInTwoDimensions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/lists/prework/Destination.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/maps/gpmreminder/client/PlmClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/maps/gpmreminder/model/Amazonian.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/maps/gpmreminder/model/CountAssociation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/maps/gpmreminder/model/DevicePart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/maps/gpmreminder/model/DevicePartReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/maps/gpmreminder/model/GpmPartReminder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/model/PaymentInstrumentType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/statics/functionrunner/dependencies/CustomerFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/statics/functionrunner/dependencies/CustomerFunctionFetcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/resources/statics/functionrunner/dependencies/TestCustomerFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/ata/retail/ProductInformation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/stock/BuyStockRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/stock/BuyStockResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/stock/InsufficientStockException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/stock/NonExistentStockException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/stock/SellStockRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/stock/SellStockResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/stock/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/stock/StockExchange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/amazon/stock/StockPriceResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/src/com/banking/business/payroll/client/BankClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/tst/com/amazon/ata/resources/debugging/classroom/dependencies/AmazonIdentityServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/tst/com/amazon/ata/resources/debugging/classroom/dependencies/AmazonProductServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/tst/com/amazon/stock/StockTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/tst/resources/catalog.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LibrariesAndUtilities/LessonPlanResources/tst/resources/customers.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/util/MusicPlaylistServiceUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bd-team-project-super_engineers.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dental/clinic/service/models/requests/CreateAppointmentRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dental/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dependency/DaoModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dependency/DaoModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dependency/ServiceComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dependency/ServiceComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/exceptions/AppointmentNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/exceptions/AppointmentNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/CreateAppointmentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/CreateAppointmentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/GetAppointmentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/GetAppointmentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/UpdateAppointmentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/UpdateAppointmentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/CreateAppointmentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/CreateAppointmentActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/AppointmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/AppointmentDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/AppointmentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/AppointmentModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/CreateAppointmentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/CreateAppointmentResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/GetAppointmentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/GetAppointmentResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/UpdateAppointmentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/UpdateAppointmentResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/util/AppointmentServiceUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/util/PatientsUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/util/PatientsUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/SZ-Agent/Bloomtech/Unit1/Sprint15/MasteryDup/bd-working-with-databases-music-playlist-service-Rappyyy",
+    "last_opened_file_path": "C:/Users/ADMIN/BloomTech/Unit1/TeamProject/bd-team-project-super_engineers",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"

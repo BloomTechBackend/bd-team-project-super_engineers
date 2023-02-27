@@ -9,6 +9,8 @@ public class AppointmentModel {
     private String serviceId;
     private Date appointmentDate;
 
+    //same fields for AppointmentModel class
+
     public AppointmentModel() {
 
     }
