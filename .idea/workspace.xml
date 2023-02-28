@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="20a509d8-6bc0-4a90-9b11-32f06e77a49d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" afterDir="false" />
@@ -11,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Dentist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Dentist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/AppointmentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/AppointmentModel.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="20a509d8-6bc0-4a90-9b11-32f06e77a49d" name="Changes" comment="" />
+>>>>>>> 3b55802946a2a27c486cab2e38a66d5bd7bc7429
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +53,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/Users/SZ-Agent/Bloomtech/TeamProject/TeamProject/bd-team-project-super_engineers",
+=======
+    "last_opened_file_path": "C:/Users/SZ-SST/BloomTech/Dental3/bd-team-project-super_engineers",
+>>>>>>> 3b55802946a2a27c486cab2e38a66d5bd7bc7429
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -61,6 +69,7 @@
       <recent name="C:\Users\SZ-Agent\Bloomtech\Unit1\TeamProject\TeamProject\gradle\wrapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SZ-SST\BloomTech\Dental3\bd-team-project-super_engineers\.idea" />
       <recent name="C:\Users\SZ-Agent\Bloomtech\Unit1\TeamProject\TeamProject\src\main\java" />
       <recent name="C:\Users\SZ-Agent\Bloomtech\Unit1\TeamProject\TeamProject" />
       <recent name="C:\Users\SZ-Agent\Bloomtech\Unit1\TeamProject\TeamProject\src\main\resources\documentation" />
