@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20a509d8-6bc0-4a90-9b11-32f06e77a49d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/dependency/DaoModule.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/dependency/DaoModule.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/dependency/ServiceComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/dependency/ServiceComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/dynamodb/models/Appointment.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/dynamodb/models/Appointment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/exceptions/AppointmentNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/exceptions/AppointmentNotFoundException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/exceptions/InvalidAttributeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/exceptions/InvalidAttributeException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/models/results/AppointmentModel$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/models/results/AppointmentModel$Builder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/models/results/AppointmentModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/models/results/AppointmentModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/util/PatientsUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/util/PatientsUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dependency/ServiceComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dependency/ServiceComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Dentist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Dentist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/AppointmentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/AppointmentModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

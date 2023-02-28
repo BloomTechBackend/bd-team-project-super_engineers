@@ -1,22 +1,42 @@
 package dental.appointment.clinic.dynamodb.models;
 
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.UUID;
 
 @DynamoDBTable(tableName = "appointments")
 public class Appointment {
 
-    UUID appointmentUUID = UUID.randomUUID();
-    LocalDateTime startTime;
-    LocalDateTime endTime;
-    String patientName;
-    UUID patientUUID = UUID.randomUUID();
-    String dentistName;
-    String description;
-    String service;
+    @DynamoDBHashKey(attributeName = "appointmentUUID")
+    private UUID appointmentUUID = UUID.randomUUID();
 
+    @DynamoDBAttribute(attributeName = "startTime")
+    private LocalDateTime startTime;
+
+    @DynamoDBAttribute(attributeName = "endTime")
+    private LocalDateTime endTime;
+
+    @DynamoDBAttribute(attributeName = "patientName")
+    private String patientName;
+
+    @DynamoDBAttribute(attributeName = "patientUUID")
+    private UUID patientUUID = UUID.randomUUID();
+
+    @DynamoDBAttribute(attributeName = "dentistName")
+    private String dentistName;
+
+    @DynamoDBAttribute(attributeName = "description")
+    private String description;
+
+    @DynamoDBAttribute(attributeName = "service")
+    private String service;
+
+    @DynamoDBAttribute(attributeName = "appointmentList")
+    private List<Appointment> appointmentList;
+
+    @DynamoDBHashKey(attributeName = "appointmentUUID")
     public UUID getAppointmentUUID() {
         return appointmentUUID;
     }
@@ -26,6 +46,7 @@ public class Appointment {
         return this;
     }
 
+    @DynamoDBAttribute(attributeName = "startTime")
     public LocalDateTime getStartTime() {
         return startTime;
     }
@@ -35,6 +56,7 @@ public class Appointment {
         return this;
     }
 
+    @DynamoDBAttribute(attributeName = "endTime")
     public LocalDateTime getEndTime() {
         return endTime;
     }
@@ -44,6 +66,7 @@ public class Appointment {
         return this;
     }
 
+    @DynamoDBAttribute(attributeName = "patientName")
     public String getPatientName() {
         return patientName;
     }
@@ -53,6 +76,7 @@ public class Appointment {
         return this;
     }
 
+    @DynamoDBAttribute(attributeName = "patientUUID")
     public UUID getPatientUUID() {
         return patientUUID;
     }
@@ -62,6 +86,7 @@ public class Appointment {
         return this;
     }
 
+    @DynamoDBAttribute(attributeName = "dentistName")
     public String getDentistName() {
         return dentistName;
     }
@@ -71,6 +96,7 @@ public class Appointment {
         return this;
     }
 
+    @DynamoDBAttribute(attributeName = "description")
     public String getDescription() {
         return description;
     }
@@ -80,6 +106,7 @@ public class Appointment {
         return this;
     }
 
+    @DynamoDBAttribute(attributeName = "service")
     public String getService() {
         return service;
     }
@@ -89,15 +116,13 @@ public class Appointment {
         return this;
     }
 
-    // put variables that an appointment may have/needs.
-    // Generate UUID = Hashkey String
-    // Start time = LocalDateTime
-    // End time = LocalDateTime
-    // Name of patient = String
-    // Dentist = String
-    // Description = String
-    // Service = String
-    // generate getters and setters put attributes on getters
-    // PatientUUID = String
+    @DynamoDBAttribute(attributeName = "appointmentList")
+    public List<Appointment> getAppointmentList() {
+        return appointmentList;
+    }
 
+    public Appointment setAppointmentList(List<Appointment> appointmentList) {
+        this.appointmentList = appointmentList;
+        return this;
+    }
 }
