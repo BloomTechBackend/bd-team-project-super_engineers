@@ -1,0 +1,241 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Appointment",
+    "version": "0.0.2"
+  },
+  "paths": {
+    "/appointments/id/{userId}/customer/{customerName}": {
+      "put": {
+        "description": "This is used to add Appointment",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "QWER1234"
+            }
+          },
+          {
+            "name": "customerName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Wendy"
+            }
+          },
+          {
+            "name": "dentistName",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Shanks"
+            }
+          },
+          {
+            "name": "contactInfo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "F-09664439602"
+            }
+          },
+          {
+            "name": "addressInfo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "qwertasdf"
+            }
+          },
+          {
+            "name": "officeLoc",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "qwertasdf"
+            }
+          },
+          {
+            "name": "durationInfo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "maximum": 60,
+              "minimum": 20,
+              "example": "30"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Appointment"
+                  },
+                  "example": {
+                    "userId": "QWER1235",
+                    "customerName": "Bea",
+                    "dentistName": "Fester",
+                    "contactInfo": "F-09664439741",
+                    "addressInfo": "qwerty",
+                    "durationInfo": 40
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid inputs",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 400,
+                    "message": "Invalid inputs"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 500,
+                    "message": "Server error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/id/{userId}/appointments": {
+      "get": {
+        "description": "Get all appointments for a given user",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "The id of the user",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Appointment"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "User not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 400,
+                    "message": "User not found"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": {
+                    "$ref": "#/components/schemas/Error"
+                  },
+                  "example": {
+                    "code": 500,
+                    "message": "Server error"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Appointment": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          },
+          "customerName": {
+            "type": "string"
+          },
+          "dentistName": {
+            "type": "string"
+          },
+          "contactInfo": {
+            "type": "string"
+          },
+          "addressInfo": {
+            "type": "string"
+          },
+          "durationInfo": {
+            "type": "integer"
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
