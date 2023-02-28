@@ -1,15 +1,18 @@
 package dental.appointment.clinic.models.results;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Objects;
+import java.util.UUID;
 
 public class AppointmentModel {
-    private String id;
-    private String customerId;
-    private String serviceId;
-    private Date appointmentDate;
-
-    //same fields for AppointmentModel class
+    private UUID id;
+    private UUID patientUUID;
+    private String patientName;
+    private String dentistName;
+    private String description;
+    private String service;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
 
     public AppointmentModel() {
 
@@ -17,41 +20,77 @@ public class AppointmentModel {
 
     public AppointmentModel(Builder builder) {
         this.id = builder.id;
-        this.customerId = builder.customerId;
-        this.serviceId = builder.serviceId;
-        this.appointmentDate = builder.appointmentDate;
+        this.patientUUID = builder.patientUUID;
+        this.patientName = builder.patientName;
+        this.dentistName = builder.dentistName;
+        this.description = builder.description;
+        this.service = builder.service;
+        this.startTime = builder.startTime;
+        this.endTime = builder.endTime;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
-    public String getCustomerId() {
-        return customerId;
+    public UUID getPatientUUID() {
+        return patientUUID;
     }
 
-    public void setCustomerId(String customerId) {
-        this.customerId = customerId;
+    public void setPatientUUID(UUID patientUUID) {
+        this.patientUUID = patientUUID;
     }
 
-    public String getServiceId() {
-        return serviceId;
+    public String getPatientName() {
+        return patientName;
     }
 
-    public void setServiceId(String serviceId) {
-        this.serviceId = serviceId;
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
     }
 
-    public Date getAppointmentDate() {
-        return appointmentDate;
+    public String getDentistName() {
+        return dentistName;
     }
 
-    public void setAppointmentDate(Date appointmentDate) {
-        this.appointmentDate = appointmentDate;
+    public void setDentistName(String dentistName) {
+        this.dentistName = dentistName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getService() {
+        return service;
+    }
+
+    public void setService(String service) {
+        this.service = service;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalDateTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public LocalDateTime getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(LocalDateTime endTime) {
+        this.endTime = endTime;
     }
 
     @Override
@@ -60,54 +99,81 @@ public class AppointmentModel {
         if (o == null || getClass() != o.getClass()) return false;
         AppointmentModel that = (AppointmentModel) o;
         return Objects.equals(id, that.id) &&
-                Objects.equals(customerId, that.customerId) &&
-                Objects.equals(serviceId, that.serviceId) &&
-                Objects.equals(appointmentDate, that.appointmentDate);
+                Objects.equals(patientUUID, that.patientUUID) &&
+                Objects.equals(patientName, that.patientName) &&
+                Objects.equals(dentistName, that.dentistName) &&
+                Objects.equals(description, that.description) &&
+                Objects.equals(service, that.service) &&
+                Objects.equals(startTime, that.startTime) &&
+                Objects.equals(endTime, that.endTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, customerId, serviceId, appointmentDate);
+        return Objects.hash(id, patientUUID, patientName, dentistName, description, service, startTime, endTime);
     }
 
     @Override
     public String toString() {
         return "AppointmentModel{" +
-                "id='" + id + '\'' +
-                ", customerId='" + customerId + '\'' +
-                ", serviceId='" + serviceId + '\'' +
-                ", appointmentDate=" + appointmentDate +
+                "id=" + id +
+                ", patientUUID=" + patientUUID +
+                ", patientName='" + patientName + '\'' +
+                ", dentistName='" + dentistName + '\'' +
+                ", description='" + description + '\'' +
+                ", service='" + service + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
                 '}';
     }
 
     public static Builder builder() { return new Builder(); }
 
     public static final class Builder {
-        private String id;
-        private String customerId;
-        private String serviceId;
-        private Date appointmentDate;
+        private UUID id;
+        private UUID patientUUID;
+        private String patientName;
+        private String dentistName;
+        private String description;
+        private String service;
+        private LocalDateTime startTime;
+        private LocalDateTime endTime;
 
-        public Builder withId(String idToUse) {
+        public Builder withId(UUID idToUse) {
             this.id = idToUse;
             return this;
         }
-
-        public Builder withCustomerId(String customerIdToUse) {
-            this.customerId = customerIdToUse;
+        public Builder withPatientUUID(UUID idPatientToUse) {
+            this.patientUUID = idPatientToUse;
             return this;
         }
 
-        public Builder withServiceId(String serviceIdToUse) {
-            this.serviceId = serviceIdToUse;
+        public Builder withPatientName(String patientName) {
+            this.patientName = patientName;
             return this;
         }
 
-        public Builder withAppointmentDate(Date appointmentDateToUse) {
-            this.appointmentDate = appointmentDateToUse;
+        public Builder WithDentistName(String dentistName) {
+            this.dentistName = dentistName;
             return this;
         }
 
-        public AppointmentModel build() {return new AppointmentModel(this);}
+        public Builder withDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public Builder withService(String service) {
+            this.service = service;
+            return this;
+        }
+        public Builder withStartTime(LocalDateTime startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Builder withEndTime(LocalDateTime endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+
     }
-}
+    }
