@@ -1,49 +1,48 @@
 package dental.appointment.clinic.dynamodb.models;
 
-import com.amazonaws.services.dynamodbv2.datamodeling.*;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
 
 @DynamoDBTable(tableName = "appointments")
 public class Appointment {
-
-    @DynamoDBHashKey(attributeName = "appointmentUUID")
-    private UUID appointmentUUID = UUID.randomUUID();
-
-    @DynamoDBAttribute(attributeName = "startTime")
+    private String appointmentId;
     private LocalDateTime startTime;
-
-    @DynamoDBAttribute(attributeName = "endTime")
     private LocalDateTime endTime;
-
-    @DynamoDBAttribute(attributeName = "patientName")
     private String patientName;
-
-    @DynamoDBAttribute(attributeName = "patientUUID")
-    private UUID patientUUID = UUID.randomUUID();
-
-    @DynamoDBAttribute(attributeName = "dentistName")
+    private String patientId;
     private String dentistName;
-
-    @DynamoDBAttribute(attributeName = "description")
     private String description;
-
-    @DynamoDBAttribute(attributeName = "service")
     private String service;
-
-    @DynamoDBAttribute(attributeName = "appointmentList")
     private List<Appointment> appointmentList;
 
-    @DynamoDBHashKey(attributeName = "appointmentUUID")
-    public UUID getAppointmentUUID() {
-        return appointmentUUID;
+    public Appointment() {
     }
 
-    public Appointment setAppointmentUUID(UUID appointmentUUID) {
-        this.appointmentUUID = appointmentUUID;
-        return this;
+    public Appointment(String appointmentId, LocalDateTime startTime, LocalDateTime endTime, String patientName,
+                       String patientId, String dentistName, String description, String service,
+                       List<Appointment> appointmentList) {
+        this.appointmentId = appointmentId;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.patientName = patientName;
+        this.patientId = patientId;
+        this.dentistName = dentistName;
+        this.description = description;
+        this.service = service;
+        this.appointmentList = appointmentList;
+    }
+
+    @DynamoDBHashKey(attributeName = "appointmentId")
+    public String getAppointmentId() {
+        return appointmentId;
+    }
+
+    public void setAppointmentId(String appointmentId) {
+        this.appointmentId = appointmentId;
     }
 
     @DynamoDBAttribute(attributeName = "startTime")
@@ -76,13 +75,13 @@ public class Appointment {
         return this;
     }
 
-    @DynamoDBAttribute(attributeName = "patientUUID")
-    public UUID getPatientUUID() {
-        return patientUUID;
+    @DynamoDBAttribute(attributeName = "patientId")
+    public String getPatientId() {
+        return patientId;
     }
 
-    public Appointment setPatientUUID(UUID patientUUID) {
-        this.patientUUID = patientUUID;
+    public Appointment setPatientId(String patientId) {
+        this.patientId = patientId;
         return this;
     }
 

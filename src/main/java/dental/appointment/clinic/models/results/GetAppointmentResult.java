@@ -1,5 +1,7 @@
 package dental.appointment.clinic.models.results;
 
+import dental.appointment.clinic.models.AppointmentModel;
+
 public class GetAppointmentResult {
     private AppointmentModel appointment;
 

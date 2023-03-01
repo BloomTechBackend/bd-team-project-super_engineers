@@ -1,47 +1,64 @@
 package dental.appointment.clinic.dynamodb.models;
 
-import java.time.LocalDateTime;
+import dental.appointment.clinic.dependency.Weekday;
+
 import java.util.List;
 
 public class Dentist {
     private String name;
-    private String contactInformation;
-    private LocalDateTime availability;
-    private List<Appointment> appointmentList;
+    private String position;
+    private String id;
+    private List<Weekday> availability;
+    private int contactNumber;
+
+    public Dentist() {
+    }
+
+    public Dentist(String name, String position, String id, List<Weekday> availability, int contactNumber) {
+        this.name = name;
+        this.position = position;
+        this.id = id;
+        this.availability = availability;
+        this.contactNumber = contactNumber;
+    }
 
     public String getName() {
         return name;
     }
 
-    public Dentist setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return this;
     }
 
-    public String getContactInformation() {
-        return contactInformation;
+    public String getPosition() {
+        return position;
     }
 
-    public Dentist setContactInformation(String contactInformation) {
-        this.contactInformation = contactInformation;
-        return this;
+    public void setPosition(String position) {
+        this.position = position;
     }
 
-    public LocalDateTime getAvailability() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public List<Weekday> getAvailability() {
         return availability;
     }
 
-    public Dentist setAvailability(LocalDateTime availability) {
+    public void setAvailability(List<Weekday> availability) {
         this.availability = availability;
-        return this;
     }
 
-    public List<Appointment> getAppointmentList() {
-        return appointmentList;
+    public int getContactNumber() {
+        return contactNumber;
     }
 
-    public Dentist setAppointmentList(List<Appointment> appointmentList) {
-        this.appointmentList = appointmentList;
-        return this;
+    public void setContactNumber(int contactNumber) {
+        this.contactNumber = contactNumber;
     }
 }
