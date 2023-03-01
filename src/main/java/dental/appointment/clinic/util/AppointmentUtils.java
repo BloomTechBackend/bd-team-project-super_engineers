@@ -6,15 +6,13 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.UUID;
 import java.util.regex.Pattern;
 
-public final class PatientsUtil {
-    // package private for testing
+public final class AppointmentUtils {
 
     // do not instantiate
-    private PatientsUtil() {}
+    private AppointmentUtils() {}
 
-
-    public static String generatePatientId() {
-//        return RandomStringUtils.randomAlphanumeric(PATIENT_ID_LENGTH);
+    public static String generatePlaylistId() {
+//        return RandomStringUtils.randomAlphanumeric(PLAYLIST_ID_LENGTH);
         return UUID.randomUUID().toString();
     }
 }

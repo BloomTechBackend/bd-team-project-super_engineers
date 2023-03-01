@@ -3,11 +3,11 @@ package dental.appointment.clinic.models.requests;
 import java.time.LocalDateTime;
 
 public class CreateAppointmentRequest {
-    private String appointmentId;
+    private String appointmentId; // will remove later
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private String patientName;
-    private String patientId;
+    private String patientId; // will remove later
     private String dentistName;
     private String description;
     private String service;
