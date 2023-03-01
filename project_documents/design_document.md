@@ -195,6 +195,8 @@ availability // List<Weekday>
 ```
 patientId // partition key, string
 patientName // string
+contactInfo // string 
+address // string
 ```
 
 

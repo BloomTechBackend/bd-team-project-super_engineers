@@ -1,65 +1,51 @@
 package dental.appointment.clinic.dynamodb.models;
 
-import com.amazonaws.services.dynamodbv2.datamodeling.*;
-
-import java.time.LocalDateTime;
-import java.util.List;
-import java.util.UUID;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
 @DynamoDBTable(tableName = "patients")
 public class Patient {
-
-    @DynamoDBHashKey(attributeName = "id")
-    private UUID id = UUID.randomUUID();
-
-    @DynamoDBAttribute(attributeName = "name")
-    private String name;
-
-    @DynamoDBAttribute(attributeName = "contactInformation")
-    private String contactInformation;
-
-    @DynamoDBAttribute(attributeName = "address")
+    private String patientId;
+    private String patientName;
+    private String contactInfo;
     private String address;
 
-    @DynamoDBAttribute(attributeName = "appointments")
-    private List<Appointment> appointments;
+    public Patient() {
+    }
 
-    public Patient() {}
-
-    public Patient(String name, String contactInformation, String address) {
-        this.name = name;
-        this.contactInformation = contactInformation;
+    public Patient(String patientId, String patientName, String contactInfo, String address) {
+        this.patientId = patientId;
+        this.patientName = patientName;
+        this.contactInfo = contactInfo;
         this.address = address;
     }
 
-    @DynamoDBHashKey(attributeName = "id")
-    public UUID getId() {
-        return id;
+    @DynamoDBHashKey(attributeName = "patientId")
+    public String getPatientId() {
+        return patientId;
     }
 
-    public Patient setId(UUID id) {
-        this.id = id;
-        return this;
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
     }
 
-    @DynamoDBAttribute(attributeName = "name")
-    public String getName() {
-        return name;
+    @DynamoDBAttribute(attributeName = "patientName")
+    public String getPatientName() {
+        return patientName;
     }
 
-    public Patient setName(String name) {
-        this.name = name;
-        return this;
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
     }
 
-    @DynamoDBAttribute(attributeName = "contactInformation")
-    public String getContactInformation() {
-        return contactInformation;
+    @DynamoDBAttribute(attributeName = "contactInfo")
+    public String getContactInfo() {
+        return contactInfo;
     }
 
-    public Patient setContactInformation(String contactInformation) {
-        this.contactInformation = contactInformation;
-        return this;
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
     }
 
     @DynamoDBAttribute(attributeName = "address")
@@ -67,18 +53,7 @@ public class Patient {
         return address;
     }
 
-    public Patient setAddress(String address) {
+    public void setAddress(String address) {
         this.address = address;
-        return this;
-    }
-
-    @DynamoDBAttribute(attributeName = "appointments")
-    public List<Appointment> getAppointments() {
-        return appointments;
-    }
-
-    public Patient setAppointments(List<Appointment> appointments) {
-        this.appointments = appointments;
-        return this;
     }
 }

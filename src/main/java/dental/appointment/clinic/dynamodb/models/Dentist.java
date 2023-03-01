@@ -1,9 +1,13 @@
 package dental.appointment.clinic.dynamodb.models;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import dental.appointment.clinic.dependency.Weekday;
 
 import java.util.List;
 
+@DynamoDBTable(tableName = "dentists")
 public class Dentist {
     private String id;
     private String name;
@@ -22,22 +26,7 @@ public class Dentist {
         this.contactNumber = contactNumber;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
+    @DynamoDBHashKey(attributeName = "id")
     public String getId() {
         return id;
     }
@@ -46,6 +35,25 @@ public class Dentist {
         this.id = id;
     }
 
+    @DynamoDBAttribute(attributeName = "name")
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @DynamoDBAttribute(attributeName = "position")
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    @DynamoDBAttribute(attributeName = "availability")
     public List<Weekday> getAvailability() {
         return availability;
     }
@@ -54,6 +62,7 @@ public class Dentist {
         this.availability = availability;
     }
 
+    @DynamoDBAttribute(attributeName = "contactNumber")
     public int getContactNumber() {
         return contactNumber;
     }

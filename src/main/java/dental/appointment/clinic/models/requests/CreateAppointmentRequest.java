@@ -1,45 +1,36 @@
 package dental.appointment.clinic.models.requests;
 
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 public class CreateAppointmentRequest {
-    private String customerName;
-    private String patientId;
+    private String appointmentId;
     private LocalDateTime startTime;
-    private int durationMinutes;
+    private LocalDateTime endTime;
+    private String patientName;
+    private String patientId;
+    private String dentistName;
+    private String description;
+    private String service;
 
-    public CreateAppointmentRequest(String customerName, String patientId, LocalDateTime startTime, int durationMinutes) {
-        this.customerName = customerName;
-        this.patientId = patientId;
+    public CreateAppointmentRequest(String appointmentId, LocalDateTime startTime, LocalDateTime endTime,
+                                    String patientName, String patientId, String dentistName, String description,
+                                    String service) {
+        this.appointmentId = appointmentId;
         this.startTime = startTime;
-        this.durationMinutes = durationMinutes;
-    }
-
-    public CreateAppointmentRequest() {
-    }
-
-    public CreateAppointmentRequest(Builder builder) {
-        this.customerName = builder.customerName;
-        this.patientId = builder.patientId;
-        this.startTime = builder.startTime;
-        this.durationMinutes = builder.durationMinutes;
-    }
-
-    public String getCustomerName() {
-        return customerName;
-    }
-
-    public void setCustomerName(String customerName) {
-        this.customerName = customerName;
-    }
-
-    public String getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(String patientId) {
+        this.endTime = endTime;
+        this.patientName = patientName;
         this.patientId = patientId;
+        this.dentistName = dentistName;
+        this.description = description;
+        this.service = service;
+    }
+
+    public String getAppointmentId() {
+        return appointmentId;
+    }
+
+    public void setAppointmentId(String appointmentId) {
+        this.appointmentId = appointmentId;
     }
 
     public LocalDateTime getStartTime() {
@@ -50,72 +41,51 @@ public class CreateAppointmentRequest {
         this.startTime = startTime;
     }
 
-    public int getDurationMinutes() {
-        return durationMinutes;
+    public LocalDateTime getEndTime() {
+        return endTime;
     }
 
-    public void setDurationMinutes(int durationMinutes) {
-        this.durationMinutes = durationMinutes;
+    public void setEndTime(LocalDateTime endTime) {
+        this.endTime = endTime;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CreateAppointmentRequest that = (CreateAppointmentRequest) o;
-        return durationMinutes == that.durationMinutes &&
-                Objects.equals(customerName, that.customerName) &&
-                Objects.equals(patientId, that.patientId) &&
-                Objects.equals(startTime, that.startTime);
+    public String getPatientName() {
+        return patientName;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(customerName, patientId, startTime, durationMinutes);
+    public void setPatientName(String patientName) {
+        this.patientName = patientName;
     }
 
-    @Override
-    public String toString() {
-        return "CreateAppointmentRequest{" +
-                "customerName='" + customerName + '\'' +
-                ", patientId='" + patientId + '\'' +
-                ", startTime=" + startTime +
-                ", durationMinutes=" + durationMinutes +
-                '}';
+    public String getPatientId() {
+        return patientId;
     }
 
-    public static Builder builder() { return new Builder(); }
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
 
-    public static final class Builder {
-        private String customerName;
-        private String patientId;
-        private LocalDateTime startTime;
-        private int durationMinutes;
+    public String getDentistName() {
+        return dentistName;
+    }
 
-        private Builder() {
+    public void setDentistName(String dentistName) {
+        this.dentistName = dentistName;
+    }
 
-        }
+    public String getDescription() {
+        return description;
+    }
 
-        public Builder withCustomerName(String customerNameToUse) {
-            this.customerName = customerNameToUse;
-            return this;
-        }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-        public Builder withPatientId(String patientIdToUse) {
-            this.patientId = patientIdToUse;
-            return this;
-        }
+    public String getService() {
+        return service;
+    }
 
-        public Builder withStartTime(LocalDateTime startTimeToUse) {
-            this.startTime = startTimeToUse;
-            return this;
-        }
-
-        public Builder withDurationMinutes(int durationMinutesToUse) {
-            this.durationMinutes = durationMinutesToUse;
-            return this;
-        }
-
-        public CreateAppointmentRequest build() { return new CreateAppointmentRequest(this); }
+    public void setService(String service) {
+        this.service = service;
     }
 }
