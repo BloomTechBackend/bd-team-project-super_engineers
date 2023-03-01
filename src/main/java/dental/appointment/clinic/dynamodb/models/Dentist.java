@@ -5,19 +5,19 @@ import dental.appointment.clinic.dependency.Weekday;
 import java.util.List;
 
 public class Dentist {
+    private String id;
     private String name;
     private String position;
-    private String id;
     private List<Weekday> availability;
     private int contactNumber;
 
     public Dentist() {
     }
 
-    public Dentist(String name, String position, String id, List<Weekday> availability, int contactNumber) {
-        this.name = name;
-        this.position = position;
+    public Dentist(String id, String name, String position, List<Weekday> availability, int contactNumber) {
         this.id = id;
+        this.position = position;
+        this.name = name;
         this.availability = availability;
         this.contactNumber = contactNumber;
     }
