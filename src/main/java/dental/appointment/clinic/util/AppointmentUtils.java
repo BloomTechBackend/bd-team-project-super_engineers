@@ -11,7 +11,7 @@ public final class AppointmentUtils {
     // do not instantiate
     private AppointmentUtils() {}
 
-    public static String generatePlaylistId() {
+    public static String generateAppointmentId() {
 //        return RandomStringUtils.randomAlphanumeric(PLAYLIST_ID_LENGTH);
         return UUID.randomUUID().toString();
     }

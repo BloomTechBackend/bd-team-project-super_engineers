@@ -13,7 +13,6 @@ public class DentistUtil {
 
 
     public static String generateDentistId() {
-
         return UUID.randomUUID().toString();
     }
 

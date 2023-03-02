@@ -1,13 +1,14 @@
 package dental.appointment.clinic.models.requests;
 
+import dental.appointment.clinic.util.PatientsUtil;
+
 import java.time.LocalDateTime;
 
 public class CreateAppointmentRequest {
-
+    String patientId;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private String patientName;
-
     private String dentistName;
     private String description;
     private String service;
@@ -22,9 +23,16 @@ public class CreateAppointmentRequest {
         this.dentistName = dentistName;
         this.description = description;
         this.service = service;
+        this.patientId = PatientsUtil.generatePatientId();
     }
 
+    public String getPatientId() {
+        return patientId;
+    }
 
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
 
     public LocalDateTime getStartTime() {
         return startTime;

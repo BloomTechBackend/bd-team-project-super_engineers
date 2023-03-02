@@ -3,12 +3,16 @@ package dental.appointment.clinic.converters;
 import dental.appointment.clinic.dynamodb.models.Appointment;
 import dental.appointment.clinic.models.AppointmentModel;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class AppointmentConverter {
 
-    public static AppointmentModel convertToAppointmentModel(Appointment appointment) {
+    public static AppointmentModel convertToAppointmentList (Appointment appointment) {
+
+        List<Appointment> appointmentList = appointment.getAppointmentList() == null ? null : new ArrayList<>(appointment.getAppointmentList());
+
         return AppointmentModel.builder()
                 .withAppointmentId(appointment.getAppointmentId())
                 .withStartTime(appointment.getStartTime())
@@ -24,11 +28,11 @@ public class AppointmentConverter {
 
     public static List<AppointmentModel> convertToAppointmentModelList(List<Appointment> appointments) {
         return appointments.stream()
-                .map(AppointmentConverter::convertToAppointmentModel)
+                .map(AppointmentConverter::convertToAppointmentList)
                 .collect(Collectors.toList());
     }
 
-    public static Appointment ToAppointment(AppointmentModel appointmentModel) {
+    public static Appointment toAppointment(AppointmentModel appointmentModel) {
         Appointment appointment = new Appointment();
         appointment.setAppointmentId(appointmentModel.getAppointmentId());
         appointment.setStartTime(appointmentModel.getStartTime());
@@ -44,7 +48,7 @@ public class AppointmentConverter {
 
     public static List<Appointment> convertToAppointmentList(List<AppointmentModel> appointmentModels) {
         return appointmentModels.stream()
-                .map(AppointmentConverter::ToAppointment)
+                .map(AppointmentConverter::toAppointment)
                 .collect(Collectors.toList());
     }
 }

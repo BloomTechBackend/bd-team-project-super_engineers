@@ -14,6 +14,8 @@ public class Appointment {
     private LocalDateTime endTime;
     private String patientName;
     private String patientId;
+    private String contactInfo;
+    private String address;
     private String dentistName;
     private String description;
     private String service;
@@ -23,13 +25,15 @@ public class Appointment {
     }
 
     public Appointment(String appointmentId, LocalDateTime startTime, LocalDateTime endTime, String patientName,
-                       String patientId, String dentistName, String description, String service,
+                       String patientId, String contactInfo, String address, String dentistName, String description, String service,
                        List<Appointment> appointmentList) {
         this.appointmentId = appointmentId;
         this.startTime = startTime;
         this.endTime = endTime;
         this.patientName = patientName;
         this.patientId = patientId;
+        this.contactInfo = contactInfo;
+        this.address = address;
         this.dentistName = dentistName;
         this.description = description;
         this.service = service;
@@ -83,6 +87,22 @@ public class Appointment {
     public Appointment setPatientId(String patientId) {
         this.patientId = patientId;
         return this;
+    }
+
+    public String getContactInfo() {
+        return contactInfo;
+    }
+
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @DynamoDBAttribute(attributeName = "dentistName")
