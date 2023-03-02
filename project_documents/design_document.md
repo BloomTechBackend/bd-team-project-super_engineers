@@ -32,8 +32,6 @@ specific dental services they require.
 you are still debating internally that you might like help working through.*
 
 1. How many and what are the models we're going to use.
-2.   
-3.  
 
 ## 3. Use Cases
 
@@ -47,7 +45,6 @@ U2. As a customer, I want to create, view, update and remove my appointment.
     
 U3. As a dentist, I want to open my portal and see my schedules.
 
-U4.
 ## 4. Project Scope
 
 *Clarify which parts of the problem you intend to solve. It helps reviewers know
@@ -115,28 +112,31 @@ will let them create, update and check the status of their schedules.
 
 // PatientModel
 
-String name;
-String contactInformation;
+String patientId;
+String patientName;
+String contactInfo;
 String address;
-String medical history;
 
 // AppointmentModel
 
-String date;
-String time;
-Integer hoursDuration;
+ String appointmentId;
+ LocalDateTime startTime;
+ LocalDateTime endTime;
+ String patientName;
+ String patientId;
+ String dentistName;
+ String description;
+ String service;
+ List<Appointment> appointmentList;
+  
 
 // DentistModel
 
+String id;
 String name;
-String contactInformation;
-String availability;
-
-// OfficeModel
-
-String location;
-String contactInformation;
-String operationHours;
+String position;
+List<Weekday> availability;
+int contactNumber;
 
 ## 6.2. *Get Appointment Endpoint*
 

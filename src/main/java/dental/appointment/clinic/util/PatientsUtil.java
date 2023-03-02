@@ -12,7 +12,6 @@ public final class PatientsUtil {
     // do not instantiate
     private PatientsUtil() {}
 
-
     public static String generatePatientId() {
 //        return RandomStringUtils.randomAlphanumeric(PATIENT_ID_LENGTH);
         return UUID.randomUUID().toString();

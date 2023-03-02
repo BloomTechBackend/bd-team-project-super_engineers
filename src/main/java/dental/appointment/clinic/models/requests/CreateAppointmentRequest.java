@@ -3,35 +3,28 @@ package dental.appointment.clinic.models.requests;
 import java.time.LocalDateTime;
 
 public class CreateAppointmentRequest {
-    private String appointmentId; // will remove later
+
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private String patientName;
-    private String patientId; // will remove later
+
     private String dentistName;
     private String description;
     private String service;
 
-    public CreateAppointmentRequest(String appointmentId, LocalDateTime startTime, LocalDateTime endTime,
-                                    String patientName, String patientId, String dentistName, String description,
+    public CreateAppointmentRequest( LocalDateTime startTime, LocalDateTime endTime,
+                                    String patientName, String dentistName, String description,
                                     String service) {
-        this.appointmentId = appointmentId;
+
         this.startTime = startTime;
         this.endTime = endTime;
         this.patientName = patientName;
-        this.patientId = patientId;
         this.dentistName = dentistName;
         this.description = description;
         this.service = service;
     }
 
-    public String getAppointmentId() {
-        return appointmentId;
-    }
 
-    public void setAppointmentId(String appointmentId) {
-        this.appointmentId = appointmentId;
-    }
 
     public LocalDateTime getStartTime() {
         return startTime;
@@ -57,13 +50,7 @@ public class CreateAppointmentRequest {
         this.patientName = patientName;
     }
 
-    public String getPatientId() {
-        return patientId;
-    }
 
-    public void setPatientId(String patientId) {
-        this.patientId = patientId;
-    }
 
     public String getDentistName() {
         return dentistName;
