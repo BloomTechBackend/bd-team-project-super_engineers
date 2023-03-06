@@ -1,7 +1,7 @@
 package dental.appointment.clinic.Activity;
 
 import dagger.internal.Factory;
-import dental.appointment.clinic.dynamodb.models.AppointmentDao;
+import dental.appointment.clinic.dynamodb.AppointmentDao;
 import javax.annotation.processing.Generated;
 import javax.inject.Provider;
 

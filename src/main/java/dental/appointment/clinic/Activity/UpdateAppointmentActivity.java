@@ -5,12 +5,10 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 import dental.appointment.clinic.converters.AppointmentConverter;
 import dental.appointment.clinic.dynamodb.models.Appointment;
-import dental.appointment.clinic.dynamodb.models.AppointmentDao;
+import dental.appointment.clinic.dynamodb.AppointmentDao;
 import dental.appointment.clinic.exceptions.AppointmentNotFoundException;
 import dental.appointment.clinic.models.requests.UpdateAppointmentRequest;
 import dental.appointment.clinic.models.results.UpdateAppointmentResult;
-import dental.appointment.clinic.util.AppointmentUtils;
-import dental.appointment.clinic.util.PatientsUtil;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -4,7 +4,7 @@ import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import dental.appointment.clinic.converters.AppointmentConverter;
 import dental.appointment.clinic.dynamodb.models.Appointment;
-import dental.appointment.clinic.dynamodb.models.AppointmentDao;
+import dental.appointment.clinic.dynamodb.AppointmentDao;
 import dental.appointment.clinic.exceptions.AppointmentNotFoundException;
 import dental.appointment.clinic.models.AppointmentModel;
 import dental.appointment.clinic.models.requests.GetAppointmentRequest;

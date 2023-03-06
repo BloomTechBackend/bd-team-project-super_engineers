@@ -1,5 +1,6 @@
 package dental.appointment.clinic.models.requests;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import dental.appointment.clinic.util.PatientsUtil;
 
 import java.time.LocalDateTime;
@@ -7,8 +8,12 @@ import java.util.Objects;
 
 public class CreateAppointmentRequest {
     private String patientId;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime startTime;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime endTime;
+
     private String patientName;
     private String dentistName;
     private String description;
@@ -70,12 +75,12 @@ public class CreateAppointmentRequest {
         this.patientId = patientId;
     }
 
-    public void setStartTime(LocalDateTime startTime) {
-        this.startTime = startTime;
+    public void setStartTime(String startTime) {
+        this.startTime = LocalDateTime.parse(startTime);
     }
 
-    public void setEndTime(LocalDateTime endTime) {
-        this.endTime = endTime;
+    public void setEndTime(String endTime) {
+        this.endTime = LocalDateTime.parse(endTime);
     }
 
     public void setPatientName(String patientName) {
@@ -119,8 +124,9 @@ public class CreateAppointmentRequest {
                 ", service='" + service + '\'' +
                 '}';
     }
+    public static Builder builder() { return new Builder(); }
 
-    public static class Builder {
+    public static final class Builder {
         private String patientId = PatientsUtil.generatePatientId();
         private LocalDateTime startTime;
         private LocalDateTime endTime;
@@ -154,7 +160,7 @@ public class CreateAppointmentRequest {
             return this;
         }
 
-        public Builder withservice(String service) {
+        public Builder withService(String service) {
             this.service = service;
             return this;
         }

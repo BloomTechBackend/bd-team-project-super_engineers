@@ -11,7 +11,7 @@ public class AppointmentConverter {
 
     public static AppointmentModel convertToAppointmentList (Appointment appointment) {
 
-        List<Appointment> appointmentList = appointment.getAppointmentList() == null ? null : new ArrayList<>(appointment.getAppointmentList());
+
 
         return AppointmentModel.builder()
                 .withAppointmentId(appointment.getAppointmentId())
@@ -22,7 +22,7 @@ public class AppointmentConverter {
                 .withDentistName(appointment.getDentistName())
                 .withDescription(appointment.getDescription())
                 .withService(appointment.getService())
-                .withAppointmentList(appointment.getAppointmentList())
+
                 .build();
     }
 
@@ -42,7 +42,6 @@ public class AppointmentConverter {
         appointment.setDentistName(appointmentModel.getDentistName());
         appointment.setDescription(appointmentModel.getDescription());
         appointment.setService(appointmentModel.getService());
-        appointment.setAppointmentList(appointmentModel.getAppointmentList());
         return appointment;
     }
 

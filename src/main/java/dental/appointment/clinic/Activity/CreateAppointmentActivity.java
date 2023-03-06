@@ -1,22 +1,22 @@
 package dental.appointment.clinic.Activity;
 
+import com.amazon.ata.aws.dynamodb.DynamoDbClientProvider;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import dental.appointment.clinic.converters.AppointmentConverter;
 import dental.appointment.clinic.dynamodb.models.Appointment;
-import dental.appointment.clinic.dynamodb.models.AppointmentDao;
+import dental.appointment.clinic.dynamodb.AppointmentDao;
 
-import dental.appointment.clinic.models.AppointmentModel;
 import dental.appointment.clinic.models.requests.CreateAppointmentRequest;
 import dental.appointment.clinic.models.results.CreateAppointmentResult;
 import dental.appointment.clinic.util.AppointmentUtils;
-import dental.appointment.clinic.util.PatientsUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.inject.Inject;
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 /**
  * Implementation of the CreateAppointmentActivity for the Dental Appointment Clinic's CreateAppointment API.
@@ -25,6 +25,7 @@ import java.util.Objects;
  */
 public class CreateAppointmentActivity implements RequestHandler<CreateAppointmentRequest, CreateAppointmentResult> {
     private final Logger log = LogManager.getLogger();
+
     private final AppointmentDao appointmentDao;
 
     /**
@@ -38,7 +39,7 @@ public class CreateAppointmentActivity implements RequestHandler<CreateAppointme
     }
 
     public CreateAppointmentActivity() {
-        appointmentDao = null;
+        this.appointmentDao = new AppointmentDao(new DynamoDBMapper(DynamoDbClientProvider.getDynamoDBClient(Regions.US_WEST_2)));
     }
 
     /**

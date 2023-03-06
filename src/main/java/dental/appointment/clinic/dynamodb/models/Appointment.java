@@ -19,26 +19,6 @@ public class Appointment {
     private String dentistName;
     private String description;
     private String service;
-    private List<Appointment> appointmentList;
-
-    public Appointment() {
-    }
-
-    public Appointment(String appointmentId, LocalDateTime startTime, LocalDateTime endTime, String patientName,
-                       String patientId, String contactInfo, String address, String dentistName, String description, String service,
-                       List<Appointment> appointmentList) {
-        this.appointmentId = appointmentId;
-        this.startTime = startTime;
-        this.endTime = endTime;
-        this.patientName = patientName;
-        this.patientId = patientId;
-        this.contactInfo = contactInfo;
-        this.address = address;
-        this.dentistName = dentistName;
-        this.description = description;
-        this.service = service;
-        this.appointmentList = appointmentList;
-    }
 
     @DynamoDBHashKey(attributeName = "appointmentId")
     public String getAppointmentId() {
@@ -88,7 +68,7 @@ public class Appointment {
         this.patientId = patientId;
         return this;
     }
-
+    @DynamoDBAttribute(attributeName = "contactInfo")
     public String getContactInfo() {
         return contactInfo;
     }
@@ -132,16 +112,6 @@ public class Appointment {
 
     public Appointment setService(String service) {
         this.service = service;
-        return this;
-    }
-
-    @DynamoDBAttribute(attributeName = "appointmentList")
-    public List<Appointment> getAppointmentList() {
-        return appointmentList;
-    }
-
-    public Appointment setAppointmentList(List<Appointment> appointmentList) {
-        this.appointmentList = appointmentList;
         return this;
     }
 }

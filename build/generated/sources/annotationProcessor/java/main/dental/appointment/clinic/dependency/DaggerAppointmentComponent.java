@@ -6,7 +6,7 @@ import dagger.internal.Preconditions;
 import dental.appointment.clinic.Activity.CreateAppointmentActivity;
 import dental.appointment.clinic.Activity.GetAppointmentActivity;
 import dental.appointment.clinic.Activity.UpdateAppointmentActivity;
-import dental.appointment.clinic.dynamodb.models.AppointmentDao;
+import dental.appointment.clinic.dynamodb.AppointmentDao;
 import javax.annotation.processing.Generated;
 import javax.inject.Provider;
 

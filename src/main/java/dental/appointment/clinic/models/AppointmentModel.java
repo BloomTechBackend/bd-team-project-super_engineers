@@ -15,7 +15,7 @@ public class AppointmentModel {
     private String dentistName;
     private String description;
     private String service;
-    private List<Appointment> appointmentList;
+
 
     public AppointmentModel() {
     }
@@ -29,7 +29,7 @@ public class AppointmentModel {
         this.dentistName = builder.dentistName;
         this.description = builder.description;
         this.service = builder.service;
-        this.appointmentList = builder.appointmentList;
+
     }
 
     public String getAppointmentId() {
@@ -64,10 +64,6 @@ public class AppointmentModel {
         return service;
     }
 
-    public List<Appointment> getAppointmentList() {
-        return appointmentList;
-    }
-
 
     @Override
     public boolean equals(Object o) {
@@ -81,14 +77,15 @@ public class AppointmentModel {
                 Objects.equals(patientId, builder.patientId) &&
                 Objects.equals(dentistName, builder.dentistName) &&
                 Objects.equals(description, builder.description) &&
-                Objects.equals(service, builder.service) &&
-                Objects.equals(appointmentList, builder.appointmentList);
+                Objects.equals(service, builder.service);
+
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(appointmentId, startTime, endTime, patientName, patientId, dentistName, description, service, appointmentList);
+        return Objects.hash(appointmentId, startTime, endTime, patientName, patientId, dentistName, description, service);
     }
+
 
     public static Builder builder() {
         return new Builder();
@@ -103,7 +100,6 @@ public class AppointmentModel {
         private String dentistName;
         private String description;
         private String service;
-        private List<Appointment> appointmentList;
 
         private Builder() {
         }
@@ -145,11 +141,6 @@ public class AppointmentModel {
 
         public Builder withService(String service) {
             this.service = service;
-            return this;
-        }
-
-        public Builder withAppointmentList(List<Appointment> appointmentList) {
-            this.appointmentList = appointmentList;
             return this;
         }
 
