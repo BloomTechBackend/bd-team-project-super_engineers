@@ -34,7 +34,11 @@ public class CreateAppointmentActivity implements RequestHandler<CreateAppointme
      */
     @Inject
     public CreateAppointmentActivity(AppointmentDao appointmentDao) {
-        this.appointmentDao = Objects.requireNonNull(appointmentDao, "AppointmentDao must not be null.");
+        this.appointmentDao = appointmentDao;
+    }
+
+    public CreateAppointmentActivity() {
+        appointmentDao = null;
     }
 
     /**

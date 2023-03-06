@@ -5,6 +5,7 @@ import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
 import dental.appointment.clinic.Activity.CreateAppointmentActivity;
 import dental.appointment.clinic.Activity.GetAppointmentActivity;
+import dental.appointment.clinic.Activity.UpdateAppointmentActivity;
 import dental.appointment.clinic.dynamodb.models.AppointmentDao;
 import javax.annotation.processing.Generated;
 import javax.inject.Provider;
@@ -46,6 +47,11 @@ public final class DaggerAppointmentComponent implements AppointmentComponent {
   @Override
   public GetAppointmentActivity provideGetAppointmentActivity() {
     return new GetAppointmentActivity(getAppointmentDao());
+  }
+
+  @Override
+  public UpdateAppointmentActivity provideUpdateAppointmentActivity() {
+    return new UpdateAppointmentActivity(getAppointmentDao());
   }
 
   public static final class Builder {

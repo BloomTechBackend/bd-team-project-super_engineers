@@ -4,47 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="20a509d8-6bc0-4a90-9b11-32f06e77a49d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Appointment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Dentist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/Dentist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/AppointmentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/results/AppointmentModel.java" afterDir="false" />
-    </list>
-=======
-    <list default="true" id="20a509d8-6bc0-4a90-9b11-32f06e77a49d" name="Changes" comment="" />
->>>>>>> 3b55802946a2a27c486cab2e38a66d5bd7bc7429
+    <list default="true" id="38c7473c-cceb-4c58-a53e-a863253f6875" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Kotlin Class" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2MIr607Z2a3QyP6AJvdQ4HAHVmw" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2MckIYvxT7yqj34rnF9ODmaSNje" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
   </component>
@@ -52,49 +26,46 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-<<<<<<< HEAD
-    "last_opened_file_path": "C:/Users/SZ-Agent/Bloomtech/TeamProject/TeamProject/bd-team-project-super_engineers",
-=======
-    "last_opened_file_path": "C:/Users/SZ-SST/BloomTech/Dental3/bd-team-project-super_engineers",
->>>>>>> 3b55802946a2a27c486cab2e38a66d5bd7bc7429
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "last_opened_file_path": "C:/Users/SZ-Agent/Desktop/bd-team-project-super_engineers"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\SZ-Agent\Bloomtech\Unit1\TeamProject\TeamProject" />
-      <recent name="C:\Users\SZ-Agent\Bloomtech\Unit1\TeamProject\TeamProject\gradle\wrapper" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\SZ-SST\BloomTech\Dental3\bd-team-project-super_engineers\.idea" />
-      <recent name="C:\Users\SZ-Agent\Bloomtech\Unit1\TeamProject\TeamProject\src\main\java" />
-      <recent name="C:\Users\SZ-Agent\Bloomtech\Unit1\TeamProject\TeamProject" />
-      <recent name="C:\Users\SZ-Agent\Bloomtech\Unit1\TeamProject\TeamProject\src\main\resources\documentation" />
-    </key>
+  <component name="RunManager">
+    <configuration name="bd-team-project-super_engineers [buildZip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildZip" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.bd-team-project-super_engineers [buildZip]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="20a509d8-6bc0-4a90-9b11-32f06e77a49d" name="Changes" comment="" />
-      <created>1677465760798</created>
+      <changelist id="38c7473c-cceb-4c58-a53e-a863253f6875" name="Changes" comment="" />
+      <created>1678074178285</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1677465760798</updated>
+      <updated>1678074178285</updated>
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>
