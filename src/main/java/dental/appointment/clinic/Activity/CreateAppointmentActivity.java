@@ -42,7 +42,6 @@ public class CreateAppointmentActivity implements RequestHandler<CreateAppointme
         String patientName = createAppointmentRequest.getPatientName();
         String dentistName = createAppointmentRequest.getDentistName();
 
-
         String appointmentId = AppointmentUtils.generateAppointmentId();
         LocalDateTime startTime = createAppointmentRequest.getStartTime();
         LocalDateTime endTime = createAppointmentRequest.getEndTime();
