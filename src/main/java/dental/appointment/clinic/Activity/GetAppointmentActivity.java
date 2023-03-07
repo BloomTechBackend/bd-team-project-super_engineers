@@ -14,39 +14,16 @@ import org.apache.logging.log4j.Logger;
 
 import javax.inject.Inject;
 
-/**
 
- Implementation of the GetAppointmentActivity for the Dental Appointment Clinic's GetAppointment API.
-
- This API allows the clinic to get one of their appointments.
- */
 public class GetAppointmentActivity implements RequestHandler<GetAppointmentRequest, GetAppointmentResult> {
     private final Logger log = LogManager.getLogger();
     private final AppointmentDao appointmentDao;
 
-    /**
-
-     Instantiates a new GetAppointmentActivity object.
-     @param appointmentDao AppointmentDao to access the appointments table.
-     */
     @Inject
     public GetAppointmentActivity(AppointmentDao appointmentDao) {
         this.appointmentDao = appointmentDao;
     }
-    /**
 
-     This method handles the incoming request by retrieving the appointment from the database.
-
-     <p>
-     It then returns the appointment.
-
-     <p>
-     If the appointment does not exist, this should throw an AppointmentNotFoundException.
-
-     @param getAppointmentRequest request object containing the appointment ID
-
-     @return getAppointmentResult result object containing the API defined {@link AppointmentModel}
-     */
     @Override
     public GetAppointmentResult handleRequest(final GetAppointmentRequest getAppointmentRequest, Context context) {
         log.info("Received GetAppointmentRequest {}", getAppointmentRequest);
@@ -57,7 +34,7 @@ public class GetAppointmentActivity implements RequestHandler<GetAppointmentRequ
             throw new AppointmentNotFoundException();
         }
 
-        AppointmentModel appointmentModel = new AppointmentConverter().convertToAppointmentList(appointment);
+        AppointmentModel appointmentModel = new AppointmentConverter().convertToAppointment(appointment);
 
         return GetAppointmentResult.builder()
                 .withAppointment(appointmentModel)

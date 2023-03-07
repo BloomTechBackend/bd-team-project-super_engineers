@@ -17,20 +17,12 @@ import javax.inject.Inject;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-/**
- * Implementation of the UpdateAppointmentActivity for the Dental Appointment Clinic's UpdateAppointment API.
- *
- * This API allows the clinic to update an existing appointment with the provided information.
- */
+
 public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointmentRequest, UpdateAppointmentResult> {
     private final Logger log = LogManager.getLogger();
     private final AppointmentDao appointmentDao;
 
-    /**
-     * Instantiates a new UpdateAppointmentActivity object.
-     *
-     * @param appointmentDao AppointmentDao to access the appointments table.
-     */
+
     @Inject
     public UpdateAppointmentActivity(AppointmentDao appointmentDao) {
         this.appointmentDao = appointmentDao;
@@ -40,19 +32,7 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
         appointmentDao = null;
     }
 
-    /**
-     * This method handles the incoming request by updating an existing appointment
-     * with the provided information.
-     * <p>
-     * It then returns the updated appointment.
-     * <p>
-     * If the provided appointment ID does not exist, throws an AppointmentNotFoundException
-     * If the provided patient name or dentist name has invalid characters, throws an
-     * InvalidAttributeValueException
-     *
-     * @param updateAppointmentRequest request object containing the appointment details
-     * @return updateAppointmentResult result object containing the API defined {@link Appointment}
-     */
+
     @Override
     public UpdateAppointmentResult handleRequest(final UpdateAppointmentRequest updateAppointmentRequest, Context context) {
         log.info("Received UpdateAppointmentRequest {}", updateAppointmentRequest);
@@ -84,7 +64,7 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
         appointmentDao.saveAppointment(updatedAppointment);
 
         return UpdateAppointmentResult.builder()
-                .withAppointment(new AppointmentConverter().convertToAppointmentList(updatedAppointment))
+                .withAppointment(new AppointmentConverter().convertToAppointment(updatedAppointment))
                 .build();
     }
 }
