@@ -47,6 +47,7 @@ public class CreateAppointmentActivity implements RequestHandler<CreateAppointme
         LocalDateTime endTime = createAppointmentRequest.getEndTime();
         String description = createAppointmentRequest.getDescription();
         String service = createAppointmentRequest.getService();
+        String contactInfo = createAppointmentRequest.getContactInfo();
 
         Appointment appointment = new Appointment();
 
@@ -55,6 +56,7 @@ public class CreateAppointmentActivity implements RequestHandler<CreateAppointme
         appointment.setEndTime(endTime);
         appointment.setPatientId(PatientsUtil.generatePatientId());
         appointment.setPatientName(patientName);
+        appointment.setContactInfo(contactInfo);
         appointment.setDentistName(dentistName);
         appointment.setDescription(description);
         appointment.setService(service);
