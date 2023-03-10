@@ -3,6 +3,8 @@ package dental.appointment.clinic.dynamodb.models;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConverted;
+import dental.appointment.clinic.converters.LocalDateTimeConverter;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -28,7 +30,7 @@ public class Appointment {
     public void setAppointmentId(String appointmentId) {
         this.appointmentId = appointmentId;
     }
-
+    @DynamoDBTypeConverted(converter = LocalDateTimeConverter.class)
     @DynamoDBAttribute(attributeName = "startTime")
     public LocalDateTime getStartTime() {
         return startTime;
@@ -38,7 +40,7 @@ public class Appointment {
         this.startTime = startTime;
         return this;
     }
-
+    @DynamoDBTypeConverted(converter = LocalDateTimeConverter.class)
     @DynamoDBAttribute(attributeName = "endTime")
     public LocalDateTime getEndTime() {
         return endTime;

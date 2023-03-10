@@ -16,6 +16,7 @@ public class AppointmentConverter {
                 .withPatientId(appointment.getPatientId())
                 .withPatientName(appointment.getPatientName())
                 .withDentistName(appointment.getDentistName())
+                .withContactInfo(appointment.getContactInfo())
                 .withDescription(appointment.getDescription())
                 .withService(appointment.getService())
                 .build();

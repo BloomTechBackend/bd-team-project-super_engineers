@@ -15,6 +15,7 @@ public class AppointmentModel {
     private String dentistName;
     private String description;
     private String service;
+    private String contactInfo;
 
 
     public AppointmentModel() {
@@ -29,7 +30,16 @@ public class AppointmentModel {
         this.dentistName = builder.dentistName;
         this.description = builder.description;
         this.service = builder.service;
+        this.contactInfo = builder.contactInfo;
 
+    }
+
+    public String getContactInfo() {
+        return contactInfo;
+    }
+
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
     }
 
     public String getAppointmentId() {
@@ -77,13 +87,14 @@ public class AppointmentModel {
                 Objects.equals(patientId, builder.patientId) &&
                 Objects.equals(dentistName, builder.dentistName) &&
                 Objects.equals(description, builder.description) &&
+                Objects.equals(contactInfo, builder.contactInfo) &&
                 Objects.equals(service, builder.service);
 
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(appointmentId, startTime, endTime, patientName, patientId, dentistName, description, service);
+        return Objects.hash(appointmentId, startTime, endTime, patientName, patientId, dentistName, description, service,contactInfo);
     }
 
 
@@ -100,6 +111,8 @@ public class AppointmentModel {
         private String dentistName;
         private String description;
         private String service;
+        private String contactInfo;
+
 
         private Builder() {
         }
@@ -131,6 +144,10 @@ public class AppointmentModel {
 
         public Builder withDentistName(String dentistName) {
             this.dentistName = dentistName;
+            return this;
+        }
+        public Builder withContactInfo(String contactInfo) {
+            this.contactInfo = contactInfo;
             return this;
         }
 

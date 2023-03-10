@@ -1,5 +1,8 @@
 package dental.appointment.clinic.Activity;
 
+import com.amazon.ata.aws.dynamodb.DynamoDbClientProvider;
+import com.amazonaws.regions.Regions;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import dental.appointment.clinic.converters.AppointmentConverter;
@@ -22,6 +25,10 @@ public class GetAppointmentActivity implements RequestHandler<GetAppointmentRequ
     @Inject
     public GetAppointmentActivity(AppointmentDao appointmentDao) {
         this.appointmentDao = appointmentDao;
+    }
+
+    public GetAppointmentActivity() {
+        this.appointmentDao = new AppointmentDao(new DynamoDBMapper(DynamoDbClientProvider.getDynamoDBClient(Regions.US_WEST_2)));
     }
 
     @Override

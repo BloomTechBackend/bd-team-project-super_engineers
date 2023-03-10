@@ -18,6 +18,7 @@ public class CreateAppointmentRequest {
     private String dentistName;
     private String description;
     private String service;
+    private  String contactInfo;
 
     public CreateAppointmentRequest(String patientId, LocalDateTime startTime, LocalDateTime endTime, String patientName,
                                     String dentistName, String description, String service) {
@@ -41,6 +42,7 @@ public class CreateAppointmentRequest {
         this.dentistName = builder.dentistName;
         this.description = builder.description;
         this.service = builder.service;
+        this.contactInfo = builder.contactInfo;
     }
 
     public String getPatientId() {
@@ -70,6 +72,10 @@ public class CreateAppointmentRequest {
     public String getService() {
         return service;
     }
+    public String getContactInfo() {
+        return contactInfo;
+    }
+
 
     public void setPatientId(String patientId) {
         this.patientId = patientId;
@@ -90,6 +96,10 @@ public class CreateAppointmentRequest {
     public void setDentistName(String dentistName) {
         this.dentistName = dentistName;
     }
+    public void setContactInfo(String contactInfo) {
+        this.contactInfo = contactInfo;
+    }
+
 
     public void setDescription(String description) {
         this.description = description;
@@ -98,6 +108,7 @@ public class CreateAppointmentRequest {
     public void setService(String service) {
         this.service = service;
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -120,13 +131,16 @@ public class CreateAppointmentRequest {
                 ", endTime=" + endTime +
                 ", patientName='" + patientName + '\'' +
                 ", dentistName='" + dentistName + '\'' +
+                ", contactInfo='" + contactInfo + '\'' +
                 ", description='" + description + '\'' +
                 ", service='" + service + '\'' +
                 '}';
     }
     public static Builder builder() { return new Builder(); }
 
+
     public static final class Builder {
+        private String contactInfo;
         private String patientId = PatientsUtil.generatePatientId();
         private LocalDateTime startTime;
         private LocalDateTime endTime;
@@ -152,6 +166,10 @@ public class CreateAppointmentRequest {
 
         public Builder withDentistName(String dentistName) {
             this.dentistName = dentistName;
+            return this;
+        }
+        public Builder withContactInfo(String contactInfo) {
+            this.contactInfo = contactInfo;
             return this;
         }
 

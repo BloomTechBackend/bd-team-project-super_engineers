@@ -55,7 +55,6 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
         updatedAppointment.setAppointmentId(existingAppointment.getAppointmentId());
         updatedAppointment.setStartTime(startTime);
         updatedAppointment.setEndTime(endTime);
-        updatedAppointment.setPatientId(updateAppointmentRequest.getPatientId());
         updatedAppointment.setPatientName(patientName);
         updatedAppointment.setDentistName(dentistName);
         updatedAppointment.setDescription(description);

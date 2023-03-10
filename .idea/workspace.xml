@@ -10,13 +10,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/distributions/TeamProject-1.0-SNAPSHOT.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/TeamProject-1.0-SNAPSHOT.zip" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configurations/Appointments.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/Appointments.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/PatientDao.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/UpdateAppointmentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/UpdateAppointmentActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/UpdateAppointmentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/UpdateAppointmentRequest.java" afterDir="false" />
+>>>>>>> 374dea16a9a272e95b51b688c73da9e17bc95eb1
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +54,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/SZ-Agent/Bloomtech/TeamProject/TeamProject3/bd-team-project-super_engineers&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/BloomTech/TeamProject/TeamProject2/bd-team-project-super_engineers&quot;
   }
 }</component>
   <component name="RecentsManager">
