@@ -15,10 +15,28 @@ public class AppointmentModel {
     private String dentistName;
     private String description;
     private String service;
+    private String address;
     private String contactInfo;
 
 
+
+
     public AppointmentModel() {
+    }
+
+    public AppointmentModel(String appointmentId, LocalDateTime startTime, LocalDateTime endTime, String patientName,
+                            String patientId, String dentistName, String description, String service,
+                            String contactInfo, String address) {
+        this.appointmentId = appointmentId;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.patientName = patientName;
+        this.patientId = patientId;
+        this.dentistName = dentistName;
+        this.description = description;
+        this.service = service;
+        this.contactInfo = contactInfo;
+        this.address = address;
     }
 
     private AppointmentModel(Builder builder) {
@@ -31,15 +49,11 @@ public class AppointmentModel {
         this.description = builder.description;
         this.service = builder.service;
         this.contactInfo = builder.contactInfo;
-
+        this.address = builder.address;
     }
 
     public String getContactInfo() {
         return contactInfo;
-    }
-
-    public void setContactInfo(String contactInfo) {
-        this.contactInfo = contactInfo;
     }
 
     public String getAppointmentId() {
@@ -74,29 +88,48 @@ public class AppointmentModel {
         return service;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Builder)) return false;
-        Builder builder = (Builder) o;
-        return Objects.equals(appointmentId, builder.appointmentId)
-                && Objects.equals(startTime, builder.startTime) &&
-                Objects.equals(endTime, builder.endTime) &&
-                Objects.equals(patientName, builder.patientName) &&
-                Objects.equals(patientId, builder.patientId) &&
-                Objects.equals(dentistName, builder.dentistName) &&
-                Objects.equals(description, builder.description) &&
-                Objects.equals(contactInfo, builder.contactInfo) &&
-                Objects.equals(service, builder.service);
-
+        if (!(o instanceof AppointmentModel)) return false;
+        AppointmentModel that = (AppointmentModel) o;
+        return Objects.equals(getAppointmentId(), that.getAppointmentId()) && Objects.equals(getStartTime(),
+                that.getStartTime()) && Objects.equals(getEndTime(), that.getEndTime()) && Objects.equals(getPatientName(),
+                that.getPatientName()) && Objects.equals(getPatientId(), that.getPatientId()) && Objects.equals(getDentistName(),
+                that.getDentistName()) && Objects.equals(getDescription(), that.getDescription()) && Objects.equals(getService(),
+                that.getService()) && Objects.equals(getContactInfo(), that.getContactInfo()) && Objects.equals(getAddress(),
+                that.getAddress());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(appointmentId, startTime, endTime, patientName, patientId, dentistName, description, service,contactInfo);
+        return Objects.hash(getAppointmentId(), getStartTime(), getEndTime(), getPatientName(), getPatientId(),
+                getDentistName(), getDescription(), getService(), getContactInfo(), getAddress());
     }
 
+    @Override
+    public String toString() {
+        return "AppointmentModel{" +
+                "appointmentId='" + appointmentId + '\'' +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", patientName='" + patientName + '\'' +
+                ", patientId='" + patientId + '\'' +
+                ", dentistName='" + dentistName + '\'' +
+                ", description='" + description + '\'' +
+                ", service='" + service + '\'' +
+                ", contactInfo='" + contactInfo + '\'' +
+                ", address='" + address + '\'' +
+                '}';
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -112,7 +145,7 @@ public class AppointmentModel {
         private String description;
         private String service;
         private String contactInfo;
-
+        private String address;
 
         private Builder() {
         }
@@ -148,6 +181,10 @@ public class AppointmentModel {
         }
         public Builder withContactInfo(String contactInfo) {
             this.contactInfo = contactInfo;
+            return this;
+        }
+        public Builder withAddress(String address) {
+            this.address = address;
             return this;
         }
 

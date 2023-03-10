@@ -8,7 +8,10 @@ import java.util.List;
 
 public class AppointmentConverter {
 
-    public AppointmentModel convertToAppointment(Appointment appointment) {
+    public AppointmentConverter() {
+    }
+
+    public AppointmentModel convertToAppointmentModel(Appointment appointment) {
         return AppointmentModel.builder()
                 .withAppointmentId(appointment.getAppointmentId())
                 .withStartTime(appointment.getStartTime())
@@ -17,16 +20,10 @@ public class AppointmentConverter {
                 .withPatientName(appointment.getPatientName())
                 .withDentistName(appointment.getDentistName())
                 .withContactInfo(appointment.getContactInfo())
+                .withAddress(appointment.getAddress())
                 .withDescription(appointment.getDescription())
                 .withService(appointment.getService())
                 .build();
     }
 
-    public List<AppointmentModel> convertToAppointmentList(List<Appointment> appointments) {
-        List<AppointmentModel> appointmentModels = new ArrayList<>();
-        for (Appointment appointment : appointments) {
-            appointmentModels.add(convertToAppointment(appointment));
-        }
-        return appointmentModels;
-    }
 }

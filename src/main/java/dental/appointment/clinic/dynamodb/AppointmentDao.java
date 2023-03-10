@@ -16,7 +16,6 @@ public class AppointmentDao {
         this.dynamoDbMapper = dynamoDbMapper;
     }
 
-
     public Appointment getAppointment(String id) {
         Appointment appointment = this.dynamoDbMapper.load(Appointment.class, id);
 

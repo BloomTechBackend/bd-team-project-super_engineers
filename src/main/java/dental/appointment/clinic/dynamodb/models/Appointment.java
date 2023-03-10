@@ -36,9 +36,8 @@ public class Appointment {
         return startTime;
     }
 
-    public Appointment setStartTime(LocalDateTime startTime) {
+    public void setStartTime(LocalDateTime startTime) {
         this.startTime = startTime;
-        return this;
     }
     @DynamoDBTypeConverted(converter = LocalDateTimeConverter.class)
     @DynamoDBAttribute(attributeName = "endTime")
@@ -46,9 +45,8 @@ public class Appointment {
         return endTime;
     }
 
-    public Appointment setEndTime(LocalDateTime endTime) {
+    public void setEndTime(LocalDateTime endTime) {
         this.endTime = endTime;
-        return this;
     }
 
     @DynamoDBAttribute(attributeName = "patientName")
@@ -56,9 +54,8 @@ public class Appointment {
         return patientName;
     }
 
-    public Appointment setPatientName(String patientName) {
+    public void setPatientName(String patientName) {
         this.patientName = patientName;
-        return this;
     }
 
     @DynamoDBAttribute(attributeName = "patientId")
@@ -66,9 +63,8 @@ public class Appointment {
         return patientId;
     }
 
-    public Appointment setPatientId(String patientId) {
+    public void setPatientId(String patientId) {
         this.patientId = patientId;
-        return this;
     }
     @DynamoDBAttribute(attributeName = "contactInfo")
     public String getContactInfo() {
@@ -78,13 +74,14 @@ public class Appointment {
     public void setContactInfo(String contactInfo) {
         this.contactInfo = contactInfo;
     }
-
+    @DynamoDBAttribute(attributeName = "address")
     public String getAddress() {
         return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
+
     }
 
     @DynamoDBAttribute(attributeName = "dentistName")
@@ -92,9 +89,8 @@ public class Appointment {
         return dentistName;
     }
 
-    public Appointment setDentistName(String dentistName) {
+    public void setDentistName(String dentistName) {
         this.dentistName = dentistName;
-        return this;
     }
 
     @DynamoDBAttribute(attributeName = "description")
@@ -102,9 +98,8 @@ public class Appointment {
         return description;
     }
 
-    public Appointment setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
-        return this;
     }
 
     @DynamoDBAttribute(attributeName = "service")
@@ -112,8 +107,7 @@ public class Appointment {
         return service;
     }
 
-    public Appointment setService(String service) {
+    public void setService(String service) {
         this.service = service;
-        return this;
     }
 }

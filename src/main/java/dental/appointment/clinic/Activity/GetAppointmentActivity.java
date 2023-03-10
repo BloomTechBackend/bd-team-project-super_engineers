@@ -41,7 +41,7 @@ public class GetAppointmentActivity implements RequestHandler<GetAppointmentRequ
             throw new AppointmentNotFoundException();
         }
 
-        AppointmentModel appointmentModel = new AppointmentConverter().convertToAppointment(appointment);
+        AppointmentModel appointmentModel = new AppointmentConverter().convertToAppointmentModel(appointment);
 
         return GetAppointmentResult.builder()
                 .withAppointment(appointmentModel)

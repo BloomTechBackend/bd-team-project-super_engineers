@@ -9,6 +9,7 @@ import dental.appointment.clinic.converters.AppointmentConverter;
 import dental.appointment.clinic.dynamodb.models.Appointment;
 import dental.appointment.clinic.dynamodb.AppointmentDao;
 
+import dental.appointment.clinic.models.AppointmentModel;
 import dental.appointment.clinic.models.requests.CreateAppointmentRequest;
 import dental.appointment.clinic.models.results.CreateAppointmentResult;
 import dental.appointment.clinic.util.AppointmentUtils;
@@ -41,30 +42,32 @@ public class CreateAppointmentActivity implements RequestHandler<CreateAppointme
 
         String patientName = createAppointmentRequest.getPatientName();
         String dentistName = createAppointmentRequest.getDentistName();
-
         String appointmentId = AppointmentUtils.generateAppointmentId();
         LocalDateTime startTime = createAppointmentRequest.getStartTime();
         LocalDateTime endTime = createAppointmentRequest.getEndTime();
         String description = createAppointmentRequest.getDescription();
         String service = createAppointmentRequest.getService();
         String contactInfo = createAppointmentRequest.getContactInfo();
+        String address = createAppointmentRequest.getAddress();
 
         Appointment appointment = new Appointment();
-
         appointment.setAppointmentId(appointmentId);
         appointment.setStartTime(startTime);
         appointment.setEndTime(endTime);
         appointment.setPatientId(PatientsUtil.generatePatientId());
         appointment.setPatientName(patientName);
         appointment.setContactInfo(contactInfo);
+        appointment.setAddress(address);
         appointment.setDentistName(dentistName);
         appointment.setDescription(description);
         appointment.setService(service);
 
         appointmentDao.saveAppointment(appointment);
 
+        AppointmentModel appointmentModel = new AppointmentConverter().convertToAppointmentModel(appointment);
         return CreateAppointmentResult.builder()
-                .withAppointment(new AppointmentConverter().convertToAppointment(appointment))
+                .withAppointment(appointmentModel)
                 .build();
+
     }
 }
