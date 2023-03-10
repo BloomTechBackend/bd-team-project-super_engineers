@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09fdcdd3-d636-4a30-9733-d3f924cd983e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/exceptions/PatientNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
@@ -25,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/models/requests/UpdateAppointmentRequest$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/models/requests/UpdateAppointmentRequest$Builder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/models/requests/UpdateAppointmentRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/dental/appointment/clinic/models/requests/UpdateAppointmentRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/distributions/TeamProject-1.0-SNAPSHOT.zip" beforeDir="false" afterPath="$PROJECT_DIR$/build/distributions/TeamProject-1.0-SNAPSHOT.zip" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/dental/appointment/clinic/Activity/CreateAppointmentActivity_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/dental/appointment/clinic/Activity/CreateAppointmentActivity_Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/dental/appointment/clinic/Activity/GetAppointmentActivity_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/dental/appointment/clinic/Activity/GetAppointmentActivity_Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/dental/appointment/clinic/Activity/UpdateAppointmentActivity_Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/generated/sources/annotationProcessor/java/main/dental/appointment/clinic/Activity/UpdateAppointmentActivity_Factory.java" afterDir="false" />
@@ -35,6 +37,13 @@
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/CreateAppointmentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/CreateAppointmentActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/GetAppointmentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/GetAppointmentActivity.java" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configurations/Appointments.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/configurations/Appointments.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/PatientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/models/PatientDao.java" afterDir="false" />
+=======
+>>>>>>> 9a8ccd379c92ee75001ba403a4f6ed293e3a14f9
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/UpdateAppointmentActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/Activity/UpdateAppointmentActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/converters/AppointmentConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/AppointmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/dynamodb/AppointmentDao.java" afterDir="false" />
@@ -42,6 +51,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/AppointmentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/AppointmentModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/CreateAppointmentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/CreateAppointmentRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/UpdateAppointmentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dental/appointment/clinic/models/requests/UpdateAppointmentRequest.java" afterDir="false" />
+>>>>>>> 374dea16a9a272e95b51b688c73da9e17bc95eb1
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
