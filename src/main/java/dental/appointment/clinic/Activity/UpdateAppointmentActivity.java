@@ -42,7 +42,6 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
 
         String patientName = updateAppointmentRequest.getPatientName();
         String dentistName = updateAppointmentRequest.getDentistName();
-        //sadasdasdasd
         Appointment existingAppointment = appointmentDao.getAppointment(updateAppointmentRequest.getId());
         if (existingAppointment == null) {
             throw new AppointmentNotFoundException("Appointment not found for ID: " + updateAppointmentRequest.getId());
@@ -61,7 +60,6 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
         updatedAppointment.setStartTime(startTime);
         updatedAppointment.setEndTime(endTime);
         updatedAppointment.setPatientName(patientName);
-        updatedAppointment.setPatientId(PatientsUtil.generatePatientId());
         updatedAppointment.setDentistName(dentistName);
         updatedAppointment.setDescription(description);
         updatedAppointment.setContactInfo(contactInfo);
