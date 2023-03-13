@@ -64,7 +64,6 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
         updatedAppointment.setDescription(description);
         updatedAppointment.setContactInfo(contactInfo);
         updatedAppointment.setAddress(address);
-
         updatedAppointment.setService(service);
 
         appointmentDao.saveAppointment(updatedAppointment);
