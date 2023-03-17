@@ -60,11 +60,6 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
             appointment.setEndTime(endTime);
         }
 
-        if (updateAppointmentRequest.getPatientId() != null) {
-            String patientId = updateAppointmentRequest.getPatientId();
-            appointment.setPatientId(patientId);
-        }
-
         if (updateAppointmentRequest.getDescription() != null) {
             String description = updateAppointmentRequest.getDescription();
             appointment.setDescription(description);
@@ -84,6 +79,8 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
             String address = updateAppointmentRequest.getAddress();
             appointment.setAddress(address);
         }
+
+
 
         Appointment updatedAppointment = appointmentDao.saveAppointment(appointment);
 

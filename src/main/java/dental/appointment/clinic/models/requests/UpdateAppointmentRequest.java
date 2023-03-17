@@ -83,10 +83,6 @@ public class UpdateAppointmentRequest {
     public void setId(String id) {
         this.id = id;
     }
-    public void setPatientId(String patientId) {
-        this.patientId = patientId;
-    }
-
 
     public void setStartTime(LocalDateTime startTime) {
         this.startTime = startTime;
