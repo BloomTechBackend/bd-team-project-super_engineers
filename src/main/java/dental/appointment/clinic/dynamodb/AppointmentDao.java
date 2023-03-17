@@ -2,7 +2,9 @@ package dental.appointment.clinic.dynamodb;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import dental.appointment.clinic.dynamodb.models.Appointment;
+import dental.appointment.clinic.dynamodb.models.Patient;
 import dental.appointment.clinic.exceptions.AppointmentNotFoundException;
+import dental.appointment.clinic.exceptions.PatientNotFoundException;
 
 import javax.inject.Inject;
 
@@ -24,6 +26,15 @@ public class AppointmentDao {
         }
 
         return appointment;
+    }
+    public Patient getPatientId(String id) {
+        Patient patient = this.dynamoDbMapper.load(Patient.class, id);
+
+        if (patient == null) {
+            throw new PatientNotFoundException("Could not find patient with id " + id);
+        }
+
+        return patient;
     }
 
 

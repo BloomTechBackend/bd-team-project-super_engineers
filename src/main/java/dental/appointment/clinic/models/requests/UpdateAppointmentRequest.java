@@ -9,6 +9,8 @@ import java.util.Objects;
 
 public class UpdateAppointmentRequest {
     private String id;
+
+    private String patientId;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
     private LocalDateTime startTime;
 
@@ -37,9 +39,13 @@ public class UpdateAppointmentRequest {
         this.service = builder.service;
         this.contactInfo = builder.contactInfo;
         this.address = builder.address;
+        this.patientId = builder.patientId;
     }
 
     public String getId() {
+        return id;
+    }
+    public String getPatientId() {
         return id;
     }
 
@@ -77,6 +83,10 @@ public class UpdateAppointmentRequest {
     public void setId(String id) {
         this.id = id;
     }
+    public void setPatientId(String patientId) {
+        this.patientId = patientId;
+    }
+
 
     public void setStartTime(LocalDateTime startTime) {
         this.startTime = startTime;
@@ -115,18 +125,19 @@ public class UpdateAppointmentRequest {
         if (this == o) return true;
         if (!(o instanceof UpdateAppointmentRequest)) return false;
         UpdateAppointmentRequest that = (UpdateAppointmentRequest) o;
-        return Objects.equals(getId(), that.getId()) && Objects.equals(getStartTime(), that.getStartTime()) && Objects.equals(getEndTime(), that.getEndTime()) && Objects.equals(getPatientName(), that.getPatientName()) && Objects.equals(getDentistName(), that.getDentistName()) && Objects.equals(getDescription(), that.getDescription()) && Objects.equals(getService(), that.getService()) && Objects.equals(getContactInfo(), that.getContactInfo()) && Objects.equals(address, that.address);
+        return Objects.equals(getId(), that.getId()) && Objects.equals(getPatientId(), that.getPatientId()) && Objects.equals(getStartTime(), that.getStartTime()) && Objects.equals(getEndTime(), that.getEndTime()) && Objects.equals(getPatientName(), that.getPatientName()) && Objects.equals(getDentistName(), that.getDentistName()) && Objects.equals(getDescription(), that.getDescription()) && Objects.equals(getService(), that.getService()) && Objects.equals(getContactInfo(), that.getContactInfo()) && Objects.equals(getAddress(), that.getAddress());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getStartTime(), getEndTime(), getPatientName(), getDentistName(), getDescription(), getService(), getContactInfo(), address);
+        return Objects.hash(getId(), getPatientId(), getStartTime(), getEndTime(), getPatientName(), getDentistName(), getDescription(), getService(), getContactInfo(), getAddress());
     }
 
     @Override
     public String toString() {
         return "UpdateAppointmentRequest{" +
                 "id='" + id + '\'' +
+                ", patientId='" + patientId + '\'' +
                 ", startTime=" + startTime +
                 ", endTime=" + endTime +
                 ", patientName='" + patientName + '\'' +
@@ -138,10 +149,9 @@ public class UpdateAppointmentRequest {
                 '}';
     }
 
-
-
     public static class Builder {
         private String id;
+        private String patientId;
         private LocalDateTime startTime;
         private LocalDateTime endTime;
         private String address;
@@ -151,9 +161,10 @@ public class UpdateAppointmentRequest {
         private String service;
         private String contactInfo;
 
-        public Builder(String id, LocalDateTime startTime, LocalDateTime endTime, String patientName,
+        public Builder(String id, String patientId, LocalDateTime startTime, LocalDateTime endTime, String patientName,
                        String dentistName, String description, String service, String contactInfo, String address) {
             this.id = id;
+            this.patientId = patientId;
             this.startTime = startTime;
             this.endTime = endTime;
             this.patientName = patientName;
@@ -166,7 +177,7 @@ public class UpdateAppointmentRequest {
 
         public Builder withStartTime(String startTime) {
             DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
-            this.endTime = LocalDateTime.parse(startTime, formatter);
+            this.startTime = LocalDateTime.parse(startTime, formatter);
             return this;
         }
 
@@ -182,6 +193,10 @@ public class UpdateAppointmentRequest {
 
         public Builder withPatientName(String patientName) {
             this.patientName = patientName;
+            return this;
+        }
+        public Builder withPatientId(String patientId) {
+            this.patientId = patientId;
             return this;
         }
         public Builder withDentistName(String dentistName) {

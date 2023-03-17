@@ -35,6 +35,11 @@ public class GetAppointmentActivity implements RequestHandler<GetAppointmentRequ
     public GetAppointmentResult handleRequest(final GetAppointmentRequest getAppointmentRequest, Context context) {
         log.info("Received GetAppointmentRequest {}", getAppointmentRequest);
         String requestedId = getAppointmentRequest.getId();
+
+        if (requestedId == null) {
+            throw new RuntimeException("Requested id is null");
+        }
+
         Appointment appointment = appointmentDao.getAppointment(requestedId);
 
         if (appointment == null){

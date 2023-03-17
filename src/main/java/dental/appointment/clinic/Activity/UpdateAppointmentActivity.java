@@ -5,27 +5,22 @@ import com.amazonaws.regions.Regions;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-
 import dental.appointment.clinic.converters.AppointmentConverter;
-import dental.appointment.clinic.dynamodb.models.Appointment;
 import dental.appointment.clinic.dynamodb.AppointmentDao;
+import dental.appointment.clinic.dynamodb.models.Appointment;
 import dental.appointment.clinic.exceptions.AppointmentNotFoundException;
+import dental.appointment.clinic.models.AppointmentModel;
 import dental.appointment.clinic.models.requests.UpdateAppointmentRequest;
 import dental.appointment.clinic.models.results.UpdateAppointmentResult;
-
-import dental.appointment.clinic.util.PatientsUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.inject.Inject;
 import java.time.LocalDateTime;
-import java.util.Objects;
-
 
 public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointmentRequest, UpdateAppointmentResult> {
     private final Logger log = LogManager.getLogger();
     private final AppointmentDao appointmentDao;
-
 
     @Inject
     public UpdateAppointmentActivity(AppointmentDao appointmentDao) {
@@ -40,36 +35,62 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
     public UpdateAppointmentResult handleRequest(final UpdateAppointmentRequest updateAppointmentRequest, Context context) {
         log.info("Received UpdateAppointmentRequest {}", updateAppointmentRequest);
 
+        String appointmentId = updateAppointmentRequest.getId();
         String patientName = updateAppointmentRequest.getPatientName();
         String dentistName = updateAppointmentRequest.getDentistName();
-        Appointment existingAppointment = appointmentDao.getAppointment(updateAppointmentRequest.getId());
-        if (existingAppointment == null) {
-            throw new AppointmentNotFoundException("Appointment not found for ID: " + updateAppointmentRequest.getId());
+
+
+        Appointment appointment = appointmentDao.getAppointment(appointmentId);
+
+        if (appointment == null){
+            throw new AppointmentNotFoundException();
         }
 
-        LocalDateTime startTime = existingAppointment.getStartTime();
-        LocalDateTime endTime = existingAppointment.getEndTime();
-        String description = updateAppointmentRequest.getDescription();
-        String service = updateAppointmentRequest.getService();
-        String address = updateAppointmentRequest.getAddress();
-        String contactInfo = updateAppointmentRequest.getContactInfo();
+        appointment.setPatientName(patientName);
+        appointment.setDentistName(dentistName);
 
-        Appointment updatedAppointment = new Appointment();
 
-        updatedAppointment.setAppointmentId(existingAppointment.getAppointmentId());
-        updatedAppointment.setStartTime(startTime);
-        updatedAppointment.setEndTime(endTime);
-        updatedAppointment.setPatientName(patientName);
-        updatedAppointment.setDentistName(dentistName);
-        updatedAppointment.setDescription(description);
-        updatedAppointment.setContactInfo(contactInfo);
-        updatedAppointment.setAddress(address);
-        updatedAppointment.setService(service);
+        if (updateAppointmentRequest.getStartTime() != null) {
+            LocalDateTime startTime = updateAppointmentRequest.getStartTime();
+            appointment.setStartTime(startTime);
+        }
 
-        appointmentDao.saveAppointment(updatedAppointment);
+        if (updateAppointmentRequest.getEndTime() != null) {
+            LocalDateTime endTime = updateAppointmentRequest.getEndTime();
+            appointment.setEndTime(endTime);
+        }
+
+        if (updateAppointmentRequest.getPatientId() != null) {
+            String patientId = updateAppointmentRequest.getPatientId();
+            appointment.setPatientId(patientId);
+        }
+
+        if (updateAppointmentRequest.getDescription() != null) {
+            String description = updateAppointmentRequest.getDescription();
+            appointment.setDescription(description);
+        }
+
+        if (updateAppointmentRequest.getService() != null) {
+            String service = updateAppointmentRequest.getService();
+            appointment.setService(service);
+        }
+
+        if (updateAppointmentRequest.getContactInfo() != null) {
+            String contactInfo = updateAppointmentRequest.getContactInfo();
+            appointment.setContactInfo(contactInfo);
+        }
+
+        if (updateAppointmentRequest.getAddress() != null) {
+            String address = updateAppointmentRequest.getAddress();
+            appointment.setAddress(address);
+        }
+
+        Appointment updatedAppointment = appointmentDao.saveAppointment(appointment);
+
+        AppointmentModel appointmentModel = new AppointmentConverter().convertToAppointmentModel(updatedAppointment);
 
         return UpdateAppointmentResult.builder()
-                .withAppointment(new AppointmentConverter().convertToAppointmentModel(updatedAppointment))
+                .withAppointment(appointmentModel)
                 .build();
     }
 }
