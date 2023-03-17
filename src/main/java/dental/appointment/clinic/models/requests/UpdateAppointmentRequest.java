@@ -1,7 +1,6 @@
 package dental.appointment.clinic.models.requests;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import dental.appointment.clinic.util.PatientsUtil;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -11,11 +10,11 @@ public class UpdateAppointmentRequest {
     private String id;
 
     private String patientId;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    private LocalDateTime startTime;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
-    private LocalDateTime endTime;
+    private String startTime;
+
+
+    private String endTime;
 
     private String patientName;
     private String dentistName;
@@ -49,11 +48,11 @@ public class UpdateAppointmentRequest {
         return id;
     }
 
-    public LocalDateTime getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
 
-    public LocalDateTime getEndTime() {
+    public String getEndTime() {
         return endTime;
     }
 
@@ -84,11 +83,11 @@ public class UpdateAppointmentRequest {
         this.id = id;
     }
 
-    public void setStartTime(LocalDateTime startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public void setEndTime(LocalDateTime endTime) {
+    public void setEndTime(String endTime) {
         this.endTime = endTime;
     }
 
@@ -148,8 +147,8 @@ public class UpdateAppointmentRequest {
     public static class Builder {
         private String id;
         private String patientId;
-        private LocalDateTime startTime;
-        private LocalDateTime endTime;
+        private String startTime;
+        private String endTime;
         private String address;
         private String patientName;
         private String dentistName;
@@ -157,7 +156,7 @@ public class UpdateAppointmentRequest {
         private String service;
         private String contactInfo;
 
-        public Builder(String id, String patientId, LocalDateTime startTime, LocalDateTime endTime, String patientName,
+        public Builder(String id, String patientId, String startTime, String endTime, String patientName,
                        String dentistName, String description, String service, String contactInfo, String address) {
             this.id = id;
             this.patientId = patientId;
@@ -172,14 +171,13 @@ public class UpdateAppointmentRequest {
         }
 
         public Builder withStartTime(String startTime) {
-            DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
-            this.startTime = LocalDateTime.parse(startTime, formatter);
+            this.startTime = startTime;
             return this;
         }
 
         public Builder withEndTime(String endTime) {
-            DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
-            this.endTime = LocalDateTime.parse(endTime, formatter);
+
+            this.endTime = endTime;
             return this;
         }
         public Builder withId(String id) {

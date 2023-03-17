@@ -159,8 +159,7 @@ public class CreateAppointmentRequest {
         }
 
         public Builder withEndTime(String endTime) {
-            DateTimeFormatter formatter = DateTimeFormatter.ISO_DATE_TIME;
-            this.endTime = LocalDateTime.parse(endTime, formatter);
+            this.endTime = LocalDateTime.parse(endTime);
             return this;
         }
 

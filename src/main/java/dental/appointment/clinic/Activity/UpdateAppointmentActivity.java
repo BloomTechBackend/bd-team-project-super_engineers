@@ -51,13 +51,13 @@ public class UpdateAppointmentActivity implements RequestHandler<UpdateAppointme
 
 
         if (updateAppointmentRequest.getStartTime() != null) {
-            LocalDateTime startTime = updateAppointmentRequest.getStartTime();
-            appointment.setStartTime(startTime);
+            String startTime = updateAppointmentRequest.getStartTime();
+            appointment.setStartTime(LocalDateTime.parse(startTime));
         }
 
         if (updateAppointmentRequest.getEndTime() != null) {
-            LocalDateTime endTime = updateAppointmentRequest.getEndTime();
-            appointment.setEndTime(endTime);
+            String endTime = updateAppointmentRequest.getEndTime();
+            appointment.setEndTime(LocalDateTime.parse(endTime));
         }
 
         if (updateAppointmentRequest.getDescription() != null) {
