@@ -93,149 +93,79 @@ metadata and add songs.
 
 ## 6. API
 
+
+### 6.2. Get Appointment Endpoint
+
+* Accepts `GET` requests to `/appointments/:id`
+* Accepts a appointment ID and returns the corresponding AppointmentModel.
+    * If the given appointment ID is not found, will throw a
+      `AppointmentNotFoundException`
+
+### 6.3. Create Appointment Endpoint
+
+* Accepts `POST` requests to `/appointments`
+* Accepts data to create a new appointment with a provided address, a given unique appointmentId
+  ID, a unique patient ID assigned by the patientUtil class, contactInfo, dentistName and other
+* information needed.
+
+### 6.4. Update Appointment Endpoint
+
+* Accepts `PUT` requests to `/playlists/:id`
+* Accepts data to update an Appointment base on the fields you want to update. Returns the updated
+  appointment.
+    * If the appointment ID is not found, will throw an `AppointmentNotFoundException`
+
 ### 6.1. Public Models
 
 ```
-// PlaylistModel
+// AppointmentModel
 
-String id;
-String name;
-String customerId;
-Integer songCount;
-List<String> tags;
+  private String appointmentId;
+    private LocalDateTime startTime;
+    private LocalDateTime endTime;
+    private String patientName;
+    private String patientId;
+    private String dentistName;
+    private String description;
+    private String service;
+    private String address;
+    private String contactInfo;
 ```
 
-```
-// SongModel
-
-String asin;
-String album;
-Integer trackNumber;
-String title;
-```
-
-### 6.2. Get Playlist Endpoint
-
-* Accepts `GET` requests to `/playlists/:id`
-* Accepts a playlist ID and returns the corresponding PlaylistModel.
-    * If the given playlist ID is not found, will throw a
-      `PlaylistNotFoundException`
-
-### 6.3. Create Playlist Endpoint
-
-* Accepts `POST` requests to `/playlists`
-* Accepts data to create a new playlist with a provided name, a given customer
-  ID, and an optional list of tags. Returns the new playlist, including a unique
-  playlist ID assigned by the Music Playlist Service.
-* For security concerns, we will validate the provided playlist name does not
-  contain any invalid characters: `" ' \`
-    * If the playlist name contains any of the invalid characters, will throw an
-      `InvalidAttributeValueException`.
-
-### 6.4. Update Playlist Endpoint
-
-* Accepts `PUT` requests to `/playlists/:id`
-* Accepts data to update a playlist including a playlist ID, an updated playlist
-  name, and the customer ID associated with the playlist. Returns the updated
-  playlist.
-    * If the playlist ID is not found, will throw a `PlaylistNotFoundException`
-* For security concerns, we will validate the provided playlist name does not
-  contain invalid characters: `" ' \`
-    * If the playlist name contains invalid characters, will throw an
-      `InvalidAttributeValueException`
-
-![Client sends submit playlist update form to Website Playlist page. Website
-playlist page sends an update request to UpdatePlaylistActivity.
-UpdatePlaylistActivity saves updates to the playlists
-database.](images/example_design_document/UpdatePlaylistSD.png)
-
-### 6.5. Add Song To Playlist Endpoint
-
-* Accepts `POST` requests to `/playlists/:id/songs`
-* Accepts a playlist ID and a song to be added. The song is specified by the
-  album's ASIN and song track number
-    * If the playlist is not found, will throw a `PlaylistNotFoundException`
-    * If the given album ASIN doesn't exist, or if the given track number does
-      not exist for the album ASIN, will throw an `AlbumTrackNotFoundException`
-* By default, will insert the new song to the end of the playlist
-    * If the optional `queueNext` parameter is provided and is `true`, this API
-      will insert the new song to the front of the playlist so that it will be
-      the next song played
-
-![Client submits the add song form to the Website Add Song page. The website
-add song page sends an add song request to the AddSongToPlaylistActivity. The
-AddSongToPlaylistActivity save the updated playlist song list in the playlists
-database.](images/example_design_document/AddSongSD.png)
-
-### 6.6. Get Playlist Songs Endpoint
-
-* Accepts `GET` requests to `/playlists/:id/songs`
-* Retrieves all songs of a playlist with the given playlist ID
-    * Returns the song list in default playlist order
-    * If the optional `order` parameter is provided, this API will return the
-      song list in order, reverse order, or shuffled order, based on the value
-      of `order`
-        * DEFAULT - same as default behavior, returns songs in playlist order
-        * REVERSED - returns playlist songs in reversed order
-        * SHUFFLED - returns playlist songs in a randomized order
-* If the playlist ID is found, but contains no songs, the songs list will be
-  empty
-* If the playlist ID is not found, will throw a `PlaylistNotFoundException`
-
-![The client visits the playlist page of the Website Playlist. The Website
-playlist page sends a get song request to the GetPlaylistSongsActivity. The
-GetPlaylistSongsActivity calls the playlists database to load the playlist. The
-playlists database returns the playlist item to the GetPlaylistSongsActivity.
-The GetPlaylistSongsActivity returns a List<SongModel> to the Website Playlist
-page. The Website playlist page presents a list of songs to the
-client.](images/example_design_document/GetPlaylistSD.png)
 
 ## 7. Tables
 
-### 7.1. `playlists`
+### 7.1. `appointments`
 
 ```
-id // partition key, string
-name // string
-customerId // string
-songCount // number
-tags // stringSet
-songList // list
-```
-
-### 7.2. `album_tracks`
-
-```
-asin // partition key, string
-track_number // sort key, number
-album_name // string
-song_title // string
+appointmentId // partition key, string
+address // string
+contactInfo // string
+dentistName // string
+description // string
+endTime // string
+patientId// string
+patientName// string
+service// string
+startTime// string
 ```
 
 ## 8. Pages
 
-![Clicking on a playlist name on the home page opens the view playlist page.
-Clicking the plus icon on the homepage opens the create playlist page. Clicking
-the Create button on the create playlist page opens the view playlist page.
-Clicking the plus icon on the view playlist page opens the add song page.
-Clicking add on the Add Song page opens the view playlist
-page.](images/example_design_document/OverallWorkflow.png)
+![Clicking on services link opens the services page.
+Clicking on Online Appointment link opens the Online Appointment page. Clicking on Check Appointment
+link opens the Check Appointment page..
+Clicking the Book an Appointment button opens the Online Appointment Page
+](images/Front-End/images/HomePage.png)
 
-![The homepage has a header that reads "Amazon Playlists." It also displays the
-user's alias. Each page has this header. Each playlist the user has is shown as
-a box with the playlist name and any tags it has. There is also a plus
-icon.](images/example_design_document/Homepage.png)
-
-![The create playlist page says "Create Playlist" with a field for name and
-tags. There is a "Create"
-button.](images/example_design_document/CreatePlaylist.png)
+![The services page says ](images/Front-End/images/Services.png)
 
 ![The view playlist page has the name of the playlist and any tags associated
 with it. Each song in the playlist is listed in order. There is a plus button
 to add a new song to the
-playlist.](images/example_design_document/ViewPlaylist.png)
+playlist.](images/Front-End/images/OnlineAppointment.png)
 
 ![The add song page has a form titled "Add Song." It displays the playlist name
 followed by fields for the asin and track number. THere is a check box for
 queue next. Finally, there is an "Add" button to submit the
-form.](images/example_design_document/AddSong.png)
+form.](images/Front-End/images/CheckAppointment.png)

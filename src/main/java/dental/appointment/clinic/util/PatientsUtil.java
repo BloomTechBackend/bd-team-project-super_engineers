@@ -1,9 +1,6 @@
 package dental.appointment.clinic.util;
-
-
-
 import java.util.UUID;
-import java.util.regex.Pattern;
+
 
 public final class PatientsUtil {
     // package private for testing

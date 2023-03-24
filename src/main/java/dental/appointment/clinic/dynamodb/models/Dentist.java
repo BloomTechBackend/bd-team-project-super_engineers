@@ -16,6 +16,7 @@ public class Dentist {
     private int contactNumber;
 
     public Dentist() {
+        
     }
 
     public Dentist(String id, String name, String position, List<Weekday> availability, int contactNumber) {
